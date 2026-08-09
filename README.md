@@ -44,6 +44,9 @@ Open `http://localhost:4000/wedding-invitation/` in a browser.
 ## Notes
 
 - `_data/wedding.yml` contains all Korean and Taiwanese Mandarin text.
+- Typography is language-aware: Korean content and its invitation title use
+	Pretendard, Taiwanese Mandarin uses Noto Serif TC, and English titles use
+	Great Vibes.
 - Add gallery images to `assets/images/`, then add one `src` and `alt` entry
 	for each image under both `ko.gallery` and `tw.gallery`. The gallery has no
 	visible captions; clicking an image opens the expanded viewer.

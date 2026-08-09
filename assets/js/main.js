@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const defaultLang = 'ko';
   const supportedLangs = ['ko', 'tw'];
   const htmlLangByLanguage = { ko: 'ko', tw: 'zh-Hant-TW' };
+  const languageClassByLanguage = { ko: 'lang-ko', tw: 'lang-tw' };
   const galleryLightbox = document.getElementById('gallery-lightbox');
   const galleryLightboxImage = galleryLightbox?.querySelector('.gallery-lightbox-image');
   const galleryImages = Array.from(document.querySelectorAll('.gallery-item img'));
@@ -41,6 +42,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     document.documentElement.lang = htmlLangByLanguage[lang];
+    document.documentElement.className = languageClassByLanguage[lang];
     localStorage.setItem('preferredLang', lang);
 
     document.querySelectorAll('[data-key]').forEach((element) => {
