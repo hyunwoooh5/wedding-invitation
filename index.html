@@ -93,7 +93,7 @@ description: "함께 축복해 주실 소중한 분들을 위한 웨딩 초대�
   <div class="gallery-grid">
     {% for item in wedding.gallery %}
     <div class="gallery-item">
-      <img src="{{ item.src }}" alt="{{ item.alt }}" data-key="gallery[{{ forloop.index0 }}].alt" />
+      <img src="{{ site.baseurl }}{{ item.src }}" alt="{{ item.alt }}" data-key="gallery[{{ forloop.index0 }}].alt" />
       <div class="gallery-caption" data-key="gallery[{{ forloop.index0 }}].caption">{{ item.caption }}</div>
     </div>
     {% endfor %}

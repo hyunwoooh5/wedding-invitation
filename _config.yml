@@ -1,8 +1,10 @@
 title: Wedding Invitation
 email: ""
 description: "A simple wedding invitation page built for GitHub Pages with Jekyll."
-baseurl: ""
-url: "https://your-github-username.github.io"
+# For GitHub Project Pages, set baseurl to the repository name (e.g. /wedding-invitation)
+baseurl: "/wedding-invitation"
+# Set to your user site URL
+url: "https://hyunwoooh5.github.io"
 markdown: kramdown
 permalink: /:path/
 collections: {}
