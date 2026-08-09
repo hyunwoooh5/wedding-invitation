@@ -30,8 +30,8 @@ ko:
     map_url: "https://map.naver.com/v5/"
 
   contact:
-    tel_groom: "tel:010-0000-0000"
-    tel_bride: "tel:010-0000-0000"
+    groom_url: "https://open.kakao.com/o/your-groom-link"
+    bride_url: "https://line.me/ti/p/your-bride-id"
     venue_phone: "02-0000-0000"
 
   extra:
@@ -57,8 +57,8 @@ ko:
       contact: "연락"
     buttons:
       view_invitation: "초대장 보기"
-      call_groom: "신랑에게 전화"
-      call_bride: "신부에게 전화"
+      contact_groom: "신랑에게 연락"
+      contact_bride: "신부에게 연락"
       view_map: "지도 보기"
     sections:
       details_title: "Invitation"
@@ -114,8 +114,8 @@ tw:
     map_url: "https://map.naver.com/v5/"
 
   contact:
-    tel_groom: "tel:010-0000-0000"
-    tel_bride: "tel:010-0000-0000"
+    groom_url: "https://open.kakao.com/o/your-groom-link"
+    bride_url: "https://line.me/ti/p/your-bride-id"
     venue_phone: "02-0000-0000"
 
   extra:
@@ -141,8 +141,8 @@ tw:
       contact: "聯絡我們"
     buttons:
       view_invitation: "查看邀請函"
-      call_groom: "致電新郎"
-      call_bride: "致電新娘"
+      contact_groom: "聯絡新郎"
+      contact_bride: "聯絡新娘"
       view_map: "查看地圖"
     sections:
       details_title: "邀請函"

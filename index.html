@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "우리의 결혼식에 초대합니다"
+title: "Wedding Invitation"
 description: "함께 축복해 주실 소중한 분들을 위한 웨딩 초대장 페이지입니다."
 ---
 
@@ -16,8 +16,8 @@ description: "함께 축복해 주실 소중한 분들을 위한 웨딩 초대�
     <p class="cover-sub" data-key="couple.subtitle">{{ wedding.couple.subtitle }}</p>
     <div class="cover-actions">
       <a class="btn" href="#details" data-key="page.buttons.view_invitation">{{ wedding.page.buttons.view_invitation }}</a>
-      <a class="btn btn-secondary" href="{{ wedding.contact.tel_groom }}" data-key="page.buttons.call_groom">{{ wedding.page.buttons.call_groom }}</a>
-      <a class="btn btn-secondary" href="{{ wedding.contact.tel_bride }}" data-key="page.buttons.call_bride">{{ wedding.page.buttons.call_bride }}</a>
+      <a class="btn btn-secondary" href="{{ wedding.contact.groom_url }}" target="_blank" rel="noopener" data-key="page.buttons.contact_groom">{{ wedding.page.buttons.contact_groom }}</a>
+      <a class="btn btn-secondary" href="{{ wedding.contact.bride_url }}" target="_blank" rel="noopener" data-key="page.buttons.contact_bride">{{ wedding.page.buttons.contact_bride }}</a>
     </div>
   </div>
 </section>
@@ -108,11 +108,11 @@ description: "함께 축복해 주실 소중한 분들을 위한 웨딩 초대�
   <div class="contact-grid">
     <div class="contact-card">
       <h3 data-key="page.sections.groom_label">{{ wedding.page.sections.groom_label }}</h3>
-      <a href="{{ wedding.contact.tel_groom }}" data-key="couple.groom">{{ wedding.couple.groom }}</a>
+      <a href="{{ wedding.contact.groom_url }}" target="_blank" rel="noopener" data-key="couple.groom">{{ wedding.couple.groom }}</a>
     </div>
     <div class="contact-card">
       <h3 data-key="page.sections.bride_label">{{ wedding.page.sections.bride_label }}</h3>
-      <a href="{{ wedding.contact.tel_bride }}" data-key="couple.bride">{{ wedding.couple.bride }}</a>
+      <a href="{{ wedding.contact.bride_url }}" target="_blank" rel="noopener" data-key="couple.bride">{{ wedding.couple.bride }}</a>
     </div>
   </div>
   <p class="note" data-key="page.sections.note">{{ wedding.page.sections.note }}</p>

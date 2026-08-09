@@ -10,6 +10,8 @@ and Taiwanese Mandarin (Traditional Chinese), switched with the `TW` button.
 3. Add your wedding details to `_data/wedding.yml`.
 4. Replace image files under `assets/images/`.
 5. Update `url` and `baseurl` in `_config.yml` for your GitHub Pages site.
+6. Replace `contact.groom_url` and `contact.bride_url` in both language
+	sections with the couple's KakaoTalk or LINE profile links.
 
 The translation keys are `ko` for Korean and `tw` for Taiwanese Mandarin.
 Keep the same keys in both sections when adding or removing invitation text.
@@ -42,6 +44,8 @@ Open `http://localhost:4000/wedding-invitation/` in a browser.
 ## Notes
 
 - `_data/wedding.yml` contains all Korean and Taiwanese Mandarin text.
+- `contact.groom_url` and `contact.bride_url` accept external KakaoTalk or
+	LINE links. The same contact URLs should be kept in both language sections.
 - `_layouts/default.html` defines the shared page shell and language button.
 - `assets/js/main.js` applies translations and stores the selected language in
 	browser `localStorage` under `preferredLang`.
