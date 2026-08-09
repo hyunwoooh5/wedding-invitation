@@ -2,7 +2,8 @@ document.addEventListener('DOMContentLoaded', function () {
   const ddayCount = document.getElementById('dday-count');
   const langToggle = document.getElementById('lang-toggle');
   const defaultLang = 'ko';
-  const supportedLangs = ['ko', 'en'];
+  const supportedLangs = ['ko', 'tw'];
+  const htmlLangByLanguage = { ko: 'ko', tw: 'zh-Hant-TW' };
   const weddingData = window.weddingData || {};
   const weddingDateString = '2026-06-06T17:00:00';
   const weddingDate = new Date(weddingDateString);
@@ -36,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
       lang = defaultLang;
     }
 
-    document.documentElement.lang = lang;
+    document.documentElement.lang = htmlLangByLanguage[lang];
     localStorage.setItem('preferredLang', lang);
 
     document.querySelectorAll('[data-key]').forEach((element) => {
@@ -49,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     if (langToggle) {
-      langToggle.textContent = lang === 'ko' ? 'EN' : 'KR';
+      langToggle.textContent = lang === 'ko' ? 'TW' : 'KR';
     }
 
     console.debug(`Applied language: ${lang}`);
@@ -68,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function () {
   if (langToggle) {
     langToggle.addEventListener('click', function () {
       const currentLang = localStorage.getItem('preferredLang') || defaultLang;
-      const nextLang = currentLang === 'ko' ? 'en' : 'ko';
+      const nextLang = currentLang === 'ko' ? 'tw' : 'ko';
       applyLanguage(nextLang);
     });
   }

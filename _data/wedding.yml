@@ -82,35 +82,35 @@ ko:
       groom_label: "신랑"
       bride_label: "신부"
 
-en:
+tw:
   couple:
-    groom: "Groom Name"
-    bride: "Bride Name"
-    date: "Saturday, December 5, 2026 at 12:00 PM"
-    subtitle: "A new beginning together"
+    groom: "新郎姓名"
+    bride: "新娘姓名"
+    date: "2026年12月5日（星期六）中午12點"
+    subtitle: "一起走向新的開始"
 
-  invitation_title: "You are invited to our special day"
+  invitation_title: "誠摯邀請您參加我們的重要日子"
 
   greeting:
-    subtitle: "Join us for our wedding celebration"
+    subtitle: "邀請您一起參與我們的婚禮"
     message: |
-      We are delighted to invite you to our wedding.
-      Please celebrate this joyful day with us
-      as we begin our new life together.
+      我們誠摯地邀請您參加我們的婚禮。
+      在我們開始共同生活的喜悅日子裡，
+      期待與您一起分享這份幸福。
 
   parents:
-    - name: "Groom's parents"
-      relation: "Eldest son of"
-      child: "Groom Name"
-    - name: "Bride's parents"
-      relation: "Eldest daughter of"
-      child: "Bride Name"
+    - name: "新郎父母"
+      relation: "長子"
+      child: "新郎姓名"
+    - name: "新娘父母"
+      relation: "長女"
+      child: "新娘姓名"
 
   venue:
-    name: "Seoul Wedding Hall"
-    address: "100 Wedding Street, Gangnam-gu, Seoul"
-    description: "Please join us at our wedding venue
-      to celebrate the beginning of our life together."
+    name: "首爾婚宴會館"
+    address: "首爾市江南區婚禮路100號"
+    description: "誠摯邀請您蒞臨婚宴會館，
+      一起見證我們共同生活的美好開始。"
     map_url: "https://map.naver.com/v5/"
 
   contact:
@@ -119,49 +119,49 @@ en:
     venue_phone: "02-0000-0000"
 
   extra:
-    attire: "Formal or neat attire is suggested."
+    attire: "建議穿著正式或整潔的服裝。"
 
   gallery:
     - src: "/assets/images/cover.svg"
-      alt: "Cover image"
-      caption: "Our beginning"
+      alt: "封面圖片"
+      caption: "我們的開始"
     - src: "/assets/images/gallery-1.svg"
-      alt: "Wedding photo 1"
-      caption: "A moment of love"
+      alt: "婚禮照片1"
+      caption: "愛的時刻"
     - src: "/assets/images/gallery-2.svg"
-      alt: "Wedding photo 2"
-      caption: "Memories together"
+      alt: "婚禮照片2"
+      caption: "一起留下的回憶"
 
   page:
     nav:
-      cover: "Cover"
-      details: "Details"
-      venue: "Venue"
-      gallery: "Gallery"
-      contact: "Contact"
+      cover: "邀請"
+      details: "婚禮資訊"
+      venue: "婚宴會館"
+      gallery: "相簿"
+      contact: "聯絡我們"
     buttons:
-      view_invitation: "View invitation"
-      call_groom: "Call Groom"
-      call_bride: "Call Bride"
-      view_map: "Open map"
+      view_invitation: "查看邀請函"
+      call_groom: "致電新郎"
+      call_bride: "致電新娘"
+      view_map: "查看地圖"
     sections:
-      details_title: "Invitation"
-      details_subtitle: "We invite you to celebrate with us"
-      event_title: "Wedding Details"
-      event_subtitle: "Please join us"
-      event_date_title: "Date & Time"
-      event_venue_title: "Location"
-      event_attire_title: "Attire"
-      venue_title: "Venue Information"
-      gallery_title: "Gallery"
-      gallery_subtitle: "Preview our moments"
-      contact_title: "Contact"
-      contact_subtitle: "Please reach out with any questions."
-      note: "Please contact us for any additional inquiries."
-      countdown: "Wedding day in D-<span id=\"dday-count\">0</span>"
-      map_placeholder: "Map area: add an image or map link for the static site."
-      venue_name_label: "Venue:"
-      venue_address_label: "Address:"
-      venue_phone_label: "Phone:"
-      groom_label: "Groom"
-      bride_label: "Bride"
+      details_title: "邀請函"
+      details_subtitle: "誠摯邀請您與我們一同慶祝"
+      event_title: "婚禮資訊"
+      event_subtitle: "期待您的蒞臨"
+      event_date_title: "日期與時間"
+      event_venue_title: "地點"
+      event_attire_title: "服裝"
+      venue_title: "婚宴會館資訊"
+      gallery_title: "相簿"
+      gallery_subtitle: "先睹為快，感受我們的幸福時刻"
+      contact_title: "聯絡我們"
+      contact_subtitle: "如有任何問題，歡迎與我們聯絡。"
+      note: "如有其他問題，歡迎隨時與我們聯絡。"
+      countdown: "距離婚禮還有 D-<span id=\"dday-count\">0</span>"
+      map_placeholder: "地圖區域：靜態網站請放入圖片或地圖連結。"
+      venue_name_label: "婚宴會館："
+      venue_address_label: "地址："
+      venue_phone_label: "電話："
+      groom_label: "新郎"
+      bride_label: "新娘"
