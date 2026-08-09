@@ -44,6 +44,9 @@ Open `http://localhost:4000/wedding-invitation/` in a browser.
 ## Notes
 
 - `_data/wedding.yml` contains all Korean and Taiwanese Mandarin text.
+- Add gallery images to `assets/images/`, then add one `src` and `alt` entry
+	for each image under both `ko.gallery` and `tw.gallery`. The gallery has no
+	visible captions; clicking an image opens the expanded viewer.
 - `contact.groom_url` and `contact.bride_url` accept external KakaoTalk or
 	LINE links. The same contact URLs should be kept in both language sections.
 - `_layouts/default.html` defines the shared page shell and language button.

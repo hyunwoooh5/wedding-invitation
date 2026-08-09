@@ -40,13 +40,16 @@ ko:
   gallery:
     - src: "/assets/images/cover.svg"
       alt: "커버 이미지"
-      caption: "우리의 시작"
     - src: "/assets/images/gallery-1.svg"
       alt: "웨딩 사진 1"
-      caption: "사랑의 순간"
     - src: "/assets/images/gallery-2.svg"
       alt: "웨딩 사진 2"
-      caption: "함께하는 추억"
+    - src: "/assets/images/cover.svg"
+      alt: "커버 이미지"
+    - src: "/assets/images/gallery-1.svg"
+      alt: "웨딩 사진 1"
+    - src: "/assets/images/gallery-2.svg"
+      alt: "웨딩 사진 2"
 
   page:
     nav:
@@ -60,6 +63,9 @@ ko:
       contact_groom: "신랑에게 연락"
       contact_bride: "신부에게 연락"
       view_map: "지도 보기"
+      gallery_previous: "‹"
+      gallery_next: "›"
+      gallery_close: "×"
     sections:
       details_title: "Invitation"
       details_subtitle: "소중한 분들을 초대합니다"
@@ -74,7 +80,7 @@ ko:
       contact_title: "연락"
       contact_subtitle: "문의가 있으시면 연락 주세요."
       note: "추가 문의 사항은 언제든지 연락 주세요."
-      countdown: "결혼식까지 D-<span id=\"dday-count\">0</span>일 남았습니다."
+      countdown: "결혼식까지 <span id=\"dday-count\">0</span>일 남았습니다."
       map_placeholder: "지도 영역: 정적 사이트에서는 이미지 또는 링크를 넣어주세요."
       venue_name_label: "예식장:"
       venue_address_label: "주소:"
@@ -124,13 +130,16 @@ tw:
   gallery:
     - src: "/assets/images/cover.svg"
       alt: "封面圖片"
-      caption: "我們的開始"
     - src: "/assets/images/gallery-1.svg"
       alt: "婚禮照片1"
-      caption: "愛的時刻"
     - src: "/assets/images/gallery-2.svg"
       alt: "婚禮照片2"
-      caption: "一起留下的回憶"
+    - src: "/assets/images/cover.svg"
+      alt: "封面圖片"
+    - src: "/assets/images/gallery-1.svg"
+      alt: "婚禮照片1"
+    - src: "/assets/images/gallery-2.svg"
+      alt: "婚禮照片2"
 
   page:
     nav:
@@ -144,6 +153,9 @@ tw:
       contact_groom: "聯絡新郎"
       contact_bride: "聯絡新娘"
       view_map: "查看地圖"
+      gallery_previous: "‹"
+      gallery_next: "›"
+      gallery_close: "×"
     sections:
       details_title: "邀請函"
       details_subtitle: "誠摯邀請您與我們一同慶祝"
@@ -158,7 +170,7 @@ tw:
       contact_title: "聯絡我們"
       contact_subtitle: "如有任何問題，歡迎與我們聯絡。"
       note: "如有其他問題，歡迎隨時與我們聯絡。"
-      countdown: "距離婚禮還有 D-<span id=\"dday-count\">0</span>"
+      countdown: "距離婚禮還有 <span id=\"dday-count\">0</span>"
       map_placeholder: "地圖區域：靜態網站請放入圖片或地圖連結。"
       venue_name_label: "婚宴會館："
       venue_address_label: "地址："
