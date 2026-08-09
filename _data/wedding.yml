@@ -38,13 +38,13 @@ ko:
     attire: "편안한 정장 또는 단정한 복장을 권장합니다."
 
   gallery:
-    - src: "/assets/images/cover.jpg"
+    - src: "/assets/images/cover.svg"
       alt: "커버 이미지"
       caption: "우리의 시작"
-    - src: "/assets/images/gallery-1.jpg"
+    - src: "/assets/images/gallery-1.svg"
       alt: "웨딩 사진 1"
       caption: "사랑의 순간"
-    - src: "/assets/images/gallery-2.jpg"
+    - src: "/assets/images/gallery-2.svg"
       alt: "웨딩 사진 2"
       caption: "함께하는 추억"
 
@@ -122,13 +122,13 @@ en:
     attire: "Formal or neat attire is suggested."
 
   gallery:
-    - src: "/assets/images/cover.jpg"
+    - src: "/assets/images/cover.svg"
       alt: "Cover image"
       caption: "Our beginning"
-    - src: "/assets/images/gallery-1.jpg"
+    - src: "/assets/images/gallery-1.svg"
       alt: "Wedding photo 1"
       caption: "A moment of love"
-    - src: "/assets/images/gallery-2.jpg"
+    - src: "/assets/images/gallery-2.svg"
       alt: "Wedding photo 2"
       caption: "Memories together"
 
