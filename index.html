@@ -1,0 +1,119 @@
+---
+layout: default
+title: "우리의 결혼식에 초대합니다"
+description: "함께 축복해 주실 소중한 분들을 위한 웨딩 초대장 페이지입니다."
+---
+
+{% assign wedding = site.data.wedding.ko %}
+
+<section id="cover" class="cover-section">
+  <div class="cover-content">
+    <div class="cover-title" data-key="invitation_title">{{ wedding.invitation_title }}</div>
+    <h1 class="cover-date" data-key="couple.date">{{ wedding.couple.date }}</h1>
+    <p class="cover-name">
+      <span data-key="couple.groom">{{ wedding.couple.groom }}</span> <span class="cover-separator">&</span> <span data-key="couple.bride">{{ wedding.couple.bride }}</span>
+    </p>
+    <p class="cover-sub" data-key="couple.subtitle">{{ wedding.couple.subtitle }}</p>
+    <div class="cover-actions">
+      <a class="btn" href="#details" data-key="page.buttons.view_invitation">{{ wedding.page.buttons.view_invitation }}</a>
+      <a class="btn btn-secondary" href="{{ wedding.contact.tel_groom }}" data-key="page.buttons.call_groom">{{ wedding.page.buttons.call_groom }}</a>
+      <a class="btn btn-secondary" href="{{ wedding.contact.tel_bride }}" data-key="page.buttons.call_bride">{{ wedding.page.buttons.call_bride }}</a>
+    </div>
+  </div>
+</section>
+
+<section id="details" class="section-block">
+  <div class="section-head">
+    <h2 data-key="page.sections.details_title">{{ wedding.page.sections.details_title }}</h2>
+    <p data-key="page.sections.details_subtitle">{{ wedding.page.sections.details_subtitle }}</p>
+  </div>
+
+  <div class="text-box" data-key="greeting.message" data-preserve-html="true">{{ wedding.greeting.message | newline_to_br }}</div>
+
+  <div class="parents-grid">
+    {% for parent in wedding.parents %}
+    <div class="parent-card">
+      <p class="parent-name" data-key="parents[{{ forloop.index0 }}].name">{{ parent.name }}</p>
+      <p class="parent-detail">
+        <span data-key="parents[{{ forloop.index0 }}].relation">{{ parent.relation }}</span> · <span data-key="parents[{{ forloop.index0 }}].child">{{ parent.child }}</span>
+      </p>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<section id="event" class="section-block highlight-block">
+  <div class="section-head">
+    <h2 data-key="page.sections.event_title">{{ wedding.page.sections.event_title }}</h2>
+    <p data-key="page.sections.event_subtitle">{{ wedding.page.sections.event_subtitle }}</p>
+  </div>
+  <div class="event-grid">
+    <div class="event-card">
+      <h3 data-key="page.sections.event_date_title">{{ wedding.page.sections.event_date_title }}</h3>
+      <p data-key="couple.date">{{ wedding.couple.date }}</p>
+    </div>
+    <div class="event-card">
+      <h3 data-key="page.sections.event_venue_title">{{ wedding.page.sections.event_venue_title }}</h3>
+      <p data-key="venue.name">{{ wedding.venue.name }}</p>
+      <p data-key="venue.address">{{ wedding.venue.address }}</p>
+    </div>
+    <div class="event-card">
+      <h3 data-key="page.sections.event_attire_title">{{ wedding.page.sections.event_attire_title }}</h3>
+      <p data-key="extra.attire">{{ wedding.extra.attire }}</p>
+    </div>
+  </div>
+  <div class="countdown" data-key="page.sections.countdown" data-preserve-html="true">
+    결혼식까지 <span id="dday-count">0</span>일 남았습니다.
+  </div>
+</section>
+
+<section id="venue" class="section-block">
+  <div class="section-head">
+    <h2 data-key="page.sections.venue_title">{{ wedding.page.sections.venue_title }}</h2>
+    <p data-key="venue.description">{{ wedding.venue.description }}</p>
+  </div>
+  <div class="venue-card">
+    <div class="venue-map">
+      <div class="map-placeholder" data-key="page.sections.map_placeholder">{{ wedding.page.sections.map_placeholder }}</div>
+    </div>
+    <div class="venue-details">
+      <p><strong data-key="page.sections.venue_name_label">{{ wedding.page.sections.venue_name_label }}</strong> <span data-key="venue.name">{{ wedding.venue.name }}</span></p>
+      <p><strong data-key="page.sections.venue_address_label">{{ wedding.page.sections.venue_address_label }}</strong> <span data-key="venue.address">{{ wedding.venue.address }}</span></p>
+      <p><strong data-key="page.sections.venue_phone_label">{{ wedding.page.sections.venue_phone_label }}</strong> <span data-key="contact.venue_phone">{{ wedding.contact.venue_phone }}</span></p>
+      <a class="btn" href="{{ wedding.venue.map_url }}" target="_blank" data-key="page.buttons.view_map">{{ wedding.page.buttons.view_map }}</a>
+    </div>
+  </div>
+</section>
+
+<section id="gallery" class="section-block gallery-block">
+  <div class="section-head">
+    <h2 data-key="page.sections.gallery_title">{{ wedding.page.sections.gallery_title }}</h2>
+    <p data-key="page.sections.gallery_subtitle">{{ wedding.page.sections.gallery_subtitle }}</p>
+  </div>
+  <div class="gallery-grid">
+    {% for item in wedding.gallery %}
+    <div class="gallery-item">
+      <img src="{{ item.src }}" alt="{{ item.alt }}" data-key="gallery[{{ forloop.index0 }}].alt" />
+      <div class="gallery-caption" data-key="gallery[{{ forloop.index0 }}].caption">{{ item.caption }}</div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<section id="contact" class="section-block footer-block">
+  <div class="section-head">
+    <h2 data-key="page.sections.contact_title">{{ wedding.page.sections.contact_title }}</h2>
+    <p data-key="page.sections.contact_subtitle">{{ wedding.page.sections.contact_subtitle }}</p>
+  </div>
+  <div class="contact-grid">
+    <div class="contact-card">
+      <h3 data-key="page.sections.groom_label">{{ wedding.page.sections.groom_label }}</h3>
+      <a href="{{ wedding.contact.tel_groom }}" data-key="couple.groom">{{ wedding.couple.groom }}</a>
+    </div>
+    <div class="contact-card">
+      <h3 data-key="page.sections.bride_label">{{ wedding.page.sections.bride_label }}</h3>
+      <a href="{{ wedding.contact.tel_bride }}" data-key="couple.bride">{{ wedding.couple.bride }}</a>
+    </div>
+  </div>
+  <p class="note" data-key="page.sections.note">{{ wedding.page.sections.note }}</p>
+</section>

@@ -1,0 +1,16 @@
+title: Wedding Invitation
+email: ""
+description: "A simple wedding invitation page built for GitHub Pages with Jekyll."
+baseurl: ""
+url: "https://your-github-username.github.io"
+markdown: kramdown
+permalink: /:path/
+collections: {}
+exclude:
+  - README.md
+  - node_modules
+  - vendor
+  - Gemfile*
+
+# Optional: switch to GitHub Pages defaults if you use GitHub-hosted build
+# theme: minima

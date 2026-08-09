@@ -1,0 +1,167 @@
+ko:
+  couple:
+    groom: "신랑 이름"
+    bride: "신부 이름"
+    date: "2026년 12월 5일 토요일 오후 12시"
+    subtitle: "함께 걷는 새로운 시작"
+
+  invitation_title: "우리의 특별한 날에 초대합니다"
+
+  greeting:
+    subtitle: "사랑하는 가족과 친구들을 초대합니다"
+    message: |
+      우리의 사랑을 축복해 주시기 위해
+      소중한 분들을 초대합니다.
+      따뜻한 마음으로 함께 해주시면 감사하겠습니다.
+
+  parents:
+    - name: "신랑 부모님"
+      relation: "의 장남"
+      child: "신랑 이름"
+    - name: "신부 부모님"
+      relation: "의 장녀"
+      child: "신부 이름"
+
+  venue:
+    name: "서울 웨딩홀"
+    address: "서울시 강남구 예식로 100"
+    description: "편안하고 아름다운 분위기의 예식장에서
+      두 사람의 새로운 출발을 함께 축복해 주세요."
+    map_url: "https://map.naver.com/v5/"
+
+  contact:
+    tel_groom: "tel:010-0000-0000"
+    tel_bride: "tel:010-0000-0000"
+    venue_phone: "02-0000-0000"
+
+  extra:
+    attire: "편안한 정장 또는 단정한 복장을 권장합니다."
+
+  gallery:
+    - src: "/assets/images/cover.jpg"
+      alt: "커버 이미지"
+      caption: "우리의 시작"
+    - src: "/assets/images/gallery-1.jpg"
+      alt: "웨딩 사진 1"
+      caption: "사랑의 순간"
+    - src: "/assets/images/gallery-2.jpg"
+      alt: "웨딩 사진 2"
+      caption: "함께하는 추억"
+
+  page:
+    nav:
+      cover: "초대"
+      details: "예식 정보"
+      venue: "예식장"
+      gallery: "갤러리"
+      contact: "연락"
+    buttons:
+      view_invitation: "초대장 보기"
+      call_groom: "신랑에게 전화"
+      call_bride: "신부에게 전화"
+      view_map: "지도 보기"
+    sections:
+      details_title: "Invitation"
+      details_subtitle: "소중한 분들을 초대합니다"
+      event_title: "결혼식 정보"
+      event_subtitle: "함께 해주세요"
+      event_date_title: "일시"
+      event_venue_title: "장소"
+      event_attire_title: "예복"
+      venue_title: "예식장 안내"
+      gallery_title: "갤러리"
+      gallery_subtitle: "우리의 순간을 미리 느껴보세요."
+      contact_title: "연락"
+      contact_subtitle: "문의가 있으시면 연락 주세요."
+      note: "추가 문의 사항은 언제든지 연락 주세요."
+      countdown: "결혼식까지 D-<span id=\"dday-count\">0</span>일 남았습니다."
+      map_placeholder: "지도 영역: 정적 사이트에서는 이미지 또는 링크를 넣어주세요."
+      venue_name_label: "예식장:"
+      venue_address_label: "주소:"
+      venue_phone_label: "전화:"
+      groom_label: "신랑"
+      bride_label: "신부"
+
+en:
+  couple:
+    groom: "Groom Name"
+    bride: "Bride Name"
+    date: "Saturday, December 5, 2026 at 12:00 PM"
+    subtitle: "A new beginning together"
+
+  invitation_title: "You are invited to our special day"
+
+  greeting:
+    subtitle: "Join us for our wedding celebration"
+    message: |
+      We are delighted to invite you to our wedding.
+      Please celebrate this joyful day with us
+      as we begin our new life together.
+
+  parents:
+    - name: "Groom's parents"
+      relation: "Eldest son of"
+      child: "Groom Name"
+    - name: "Bride's parents"
+      relation: "Eldest daughter of"
+      child: "Bride Name"
+
+  venue:
+    name: "Seoul Wedding Hall"
+    address: "100 Wedding Street, Gangnam-gu, Seoul"
+    description: "Please join us at our wedding venue
+      to celebrate the beginning of our life together."
+    map_url: "https://map.naver.com/v5/"
+
+  contact:
+    tel_groom: "tel:010-0000-0000"
+    tel_bride: "tel:010-0000-0000"
+    venue_phone: "02-0000-0000"
+
+  extra:
+    attire: "Formal or neat attire is suggested."
+
+  gallery:
+    - src: "/assets/images/cover.jpg"
+      alt: "Cover image"
+      caption: "Our beginning"
+    - src: "/assets/images/gallery-1.jpg"
+      alt: "Wedding photo 1"
+      caption: "A moment of love"
+    - src: "/assets/images/gallery-2.jpg"
+      alt: "Wedding photo 2"
+      caption: "Memories together"
+
+  page:
+    nav:
+      cover: "Cover"
+      details: "Details"
+      venue: "Venue"
+      gallery: "Gallery"
+      contact: "Contact"
+    buttons:
+      view_invitation: "View invitation"
+      call_groom: "Call Groom"
+      call_bride: "Call Bride"
+      view_map: "Open map"
+    sections:
+      details_title: "Invitation"
+      details_subtitle: "We invite you to celebrate with us"
+      event_title: "Wedding Details"
+      event_subtitle: "Please join us"
+      event_date_title: "Date & Time"
+      event_venue_title: "Location"
+      event_attire_title: "Attire"
+      venue_title: "Venue Information"
+      gallery_title: "Gallery"
+      gallery_subtitle: "Preview our moments"
+      contact_title: "Contact"
+      contact_subtitle: "Please reach out with any questions."
+      note: "Please contact us for any additional inquiries."
+      countdown: "Wedding day in D-<span id=\"dday-count\">0</span>"
+      map_placeholder: "Map area: add an image or map link for the static site."
+      venue_name_label: "Venue:"
+      venue_address_label: "Address:"
+      venue_phone_label: "Phone:"
+      groom_label: "Groom"
+      bride_label: "Bride"

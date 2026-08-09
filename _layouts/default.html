@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>{{ page.title | default: site.title }}</title>
+    <meta name="description" content="{{ page.description | default: site.description }}" />
+    <meta property="og:title" content="{{ page.title | default: site.title }}" />
+    <meta property="og:description" content="{{ page.description | default: site.description }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ site.url }}{{ site.baseurl }}{{ page.url }}" />
+    <meta property="og:image" content="{{ site.url }}{{ site.baseurl }}/assets/images/preview.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Noto+Serif+KR:wght@300;400;600;700&display=swap" />
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="site-title">
+          <span class="heart">❤️</span>
+          {{ site.title }}
+        </div>
+        <nav class="site-nav">
+          <a href="#cover" data-key="page.nav.cover">초대</a>
+          <a href="#details" data-key="page.nav.details">예식 정보</a>
+          <a href="#venue" data-key="page.nav.venue">예식장</a>
+          <a href="#gallery" data-key="page.nav.gallery">갤러리</a>
+          <a href="#contact" data-key="page.nav.contact">연락</a>
+        </nav>
+        <button id="lang-toggle" class="language-toggle" type="button" aria-label="언어 변경">EN</button>
+      </header>
+
+      <main class="site-main">
+        {{ content }}
+      </main>
+
+      <footer class="site-footer">
+        <p></p>
+      </footer>
+    </div>
+    <script>
+      window.weddingData = {{ site.data.wedding | jsonify }};
+    </script>
+    <script src="{{ site.baseurl }}/assets/js/main.js"></script>
+  </body>
+</html>
