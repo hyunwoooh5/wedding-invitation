@@ -50,6 +50,12 @@ Open `http://localhost:4000/wedding-invitation/` in a browser.
 - Add gallery images to `assets/images/`, then add one `src` and `alt` entry
 	for each image under both `ko.gallery` and `tw.gallery`. The gallery has no
 	visible captions; clicking an image opens the expanded viewer.
+- Add the venue, parking, and metro map images to `assets/images/` using the
+	filenames `venue-map.png`, `parking-map.png`, and `metro-map.png`, or change
+	the matching `venue.map_image`, `venue.parking_map`, and `venue.metro_map`
+	values in both language sections. The paths should start with
+	`/assets/images/`. Update the matching `*_map_alt` values to describe each
+	image. Jekyll will include these images in the venue section.
 - `contact.groom_url` and `contact.bride_url` accept external KakaoTalk or
 	LINE links. The same contact URLs should be kept in both language sections.
 - `_layouts/default.html` defines the shared page shell and language button.

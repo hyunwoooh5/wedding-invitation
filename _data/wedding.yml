@@ -28,6 +28,12 @@ ko:
     description: "편안하고 아름다운 분위기의 예식장에서
       두 사람의 새로운 출발을 함께 축복해 주세요."
     map_url: "https://map.naver.com/v5/"
+    map_image: "/assets/images/venue-map.png"
+    map_image_alt: "예식장 위치 지도"
+    parking_map: "/assets/images/parking-map.png"
+    parking_map_alt: "예식장 주변 주차 안내 지도"
+    metro_map: "/assets/images/metro-map.png"
+    metro_map_alt: "지하철역에서 예식장까지 오는 길 안내 지도"
 
   contact:
     groom_url: "https://open.kakao.com/o/your-groom-link"
@@ -87,6 +93,10 @@ ko:
       venue_phone_label: "전화:"
       groom_label: "신랑"
       bride_label: "신부"
+      parking_title: "주차 안내"
+      parking_description: "예식장 주변 주차 위치를 확인해 주세요."
+      metro_title: "대중교통 안내"
+      metro_description: "지하철역에서 예식장까지 오는 길을 확인해 주세요."
 
 tw:
   couple:
@@ -118,6 +128,12 @@ tw:
     description: "誠摯邀請您蒞臨婚宴會館，
       一起見證我們共同生活的美好開始。"
     map_url: "https://map.naver.com/v5/"
+    map_image: "/assets/images/venue-map.png"
+    map_image_alt: "婚宴會館位置地圖"
+    parking_map: "/assets/images/parking-map.png"
+    parking_map_alt: "婚宴會館周邊停車位置地圖"
+    metro_map: "/assets/images/metro-map.png"
+    metro_map_alt: "從捷運站前往婚宴會館的路線地圖"
 
   contact:
     groom_url: "https://open.kakao.com/o/your-groom-link"
@@ -177,3 +193,7 @@ tw:
       venue_phone_label: "電話："
       groom_label: "新郎"
       bride_label: "新娘"
+      parking_title: "停車資訊"
+      parking_description: "請參考婚宴會館周邊的停車位置。"
+      metro_title: "大眾運輸資訊"
+      metro_description: "請參考從捷運站前往婚宴會館的路線。"

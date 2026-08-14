@@ -74,7 +74,7 @@ description: "함께 축복해 주실 소중한 분들을 위한 웨딩 초대�
   </div>
   <div class="venue-card">
     <div class="venue-map">
-      <div class="map-placeholder" data-key="page.sections.map_placeholder">{{ wedding.page.sections.map_placeholder }}</div>
+      <img src="{{ site.baseurl }}{{ wedding.venue.map_image }}" alt="{{ wedding.venue.map_image_alt }}" data-key="venue.map_image_alt" />
     </div>
     <div class="venue-details">
       <p><strong data-key="page.sections.venue_name_label">{{ wedding.page.sections.venue_name_label }}</strong> <span data-key="venue.name">{{ wedding.venue.name }}</span></p>
@@ -82,6 +82,22 @@ description: "함께 축복해 주실 소중한 분들을 위한 웨딩 초대�
       <p><strong data-key="page.sections.venue_phone_label">{{ wedding.page.sections.venue_phone_label }}</strong> <span data-key="contact.venue_phone">{{ wedding.contact.venue_phone }}</span></p>
       <a class="btn" href="{{ wedding.venue.map_url }}" target="_blank" data-key="page.buttons.view_map">{{ wedding.page.buttons.view_map }}</a>
     </div>
+  </div>
+  <div class="directions-grid">
+    <article class="direction-card">
+      <div class="section-head">
+        <h3 data-key="page.sections.parking_title">{{ wedding.page.sections.parking_title }}</h3>
+        <p data-key="page.sections.parking_description">{{ wedding.page.sections.parking_description }}</p>
+      </div>
+      <img class="direction-map" src="{{ site.baseurl }}{{ wedding.venue.parking_map }}" alt="{{ wedding.venue.parking_map_alt }}" data-key="venue.parking_map_alt" />
+    </article>
+    <article class="direction-card">
+      <div class="section-head">
+        <h3 data-key="page.sections.metro_title">{{ wedding.page.sections.metro_title }}</h3>
+        <p data-key="page.sections.metro_description">{{ wedding.page.sections.metro_description }}</p>
+      </div>
+      <img class="direction-map" src="{{ site.baseurl }}{{ wedding.venue.metro_map }}" alt="{{ wedding.venue.metro_map_alt }}" data-key="venue.metro_map_alt" />
+    </article>
   </div>
 </section>
 

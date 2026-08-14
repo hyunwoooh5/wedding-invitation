@@ -270,9 +270,51 @@ html.lang-en .cover-title {
   max-width: 320px;
 }
 
+.venue-map img {
+  width: 100%;
+  height: 100%;
+  min-height: 220px;
+  object-fit: cover;
+  border-radius: 24px;
+}
+
 .venue-details {
   display: grid;
   gap: 0.65rem;
+}
+
+.directions-grid {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.direction-card {
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  background: var(--surface);
+}
+
+.direction-card .section-head {
+  padding: 1.25rem 1.25rem 0;
+  margin-bottom: 1rem;
+}
+
+.direction-card h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.direction-card .section-head p {
+  margin-top: 0.5rem;
+}
+
+.direction-map {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  background: var(--surface-strong);
 }
 
 .gallery-grid {
@@ -416,6 +458,10 @@ html.lang-en .cover-title {
 
   .venue-card {
     grid-template-columns: 1.5fr 1fr;
+  }
+
+  .directions-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .gallery-grid {
