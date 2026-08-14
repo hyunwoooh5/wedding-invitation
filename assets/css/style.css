@@ -449,6 +449,76 @@ html.lang-en .cover-title {
   margin-top: 2.5rem;
 }
 
+@media (max-width: 719px) {
+  .page-shell {
+    padding: 0 0.75rem 2rem;
+  }
+
+  .site-header {
+    grid-template-columns: 1fr auto;
+    gap: 0.75rem;
+    padding-top: 1rem;
+  }
+
+  .site-title {
+    min-width: 0;
+    font-size: 0.85rem;
+    letter-spacing: 0.12em;
+  }
+
+  .site-nav {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    gap: 0.5rem 0.75rem;
+    font-size: 0.8rem;
+  }
+
+  .language-toggle {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.85rem;
+  }
+
+  .cover-section {
+    padding: 2rem 0 1rem;
+  }
+
+  .cover-content {
+    padding: 2rem 1rem;
+  }
+
+  .cover-title {
+    font-size: clamp(2.25rem, 12vw, 3.5rem);
+  }
+
+  .cover-date {
+    font-size: clamp(1.35rem, 7vw, 2rem);
+  }
+
+  .cover-actions .btn {
+    width: 100%;
+  }
+
+  .section-block {
+    margin-top: 1.5rem;
+    padding: 1.5rem 1rem;
+    border-radius: 20px;
+  }
+
+  .section-head h2 {
+    font-size: 1.5rem;
+  }
+
+  .text-box,
+  .section-head p,
+  .parent-detail,
+  .event-card,
+  .venue-details,
+  .contact-card,
+  .note {
+    overflow-wrap: anywhere;
+  }
+}
+
 @media (min-width: 720px) {
   .parents-grid,
   .event-grid,
