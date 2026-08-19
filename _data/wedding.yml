@@ -113,6 +113,10 @@ ko:
       gallery_previous: "‹"
       gallery_next: "›"
       gallery_close: "×"
+    letter:
+      prompt: "가볍게 터치해 편지를 열어주세요"
+      open: "초대장 열기"
+      skip: "건너뛰기"
     sections:
       details_title: "Invitation"
       details_subtitle: "소중한 분들을 초대합니다"
@@ -259,6 +263,10 @@ tw:
       gallery_previous: "‹"
       gallery_next: "›"
       gallery_close: "×"
+    letter:
+      prompt: "請輕觸以開啟邀請函"
+      open: "開啟邀請函"
+      skip: "略過"
     sections:
       details_title: "邀請函"
       details_subtitle: "誠摯邀請您與我們一同慶祝"

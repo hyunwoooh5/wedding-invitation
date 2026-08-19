@@ -11,7 +11,9 @@ document.addEventListener('DOMContentLoaded', function () {
   const weddingData = window.weddingData || {};
   const weddingDateString = '2026-12-05T12:00:00';
   const weddingDate = new Date(weddingDateString);
-  const guestName = new URLSearchParams(window.location.search).get('to')?.trim().slice(0, 80) || '';
+  const queryParams = new URLSearchParams(window.location.search);
+  const guestName = queryParams.get('to')?.trim().slice(0, 80) || '';
+  const requestedLanguage = queryParams.get('language')?.trim().toLowerCase();
   const letterIntro = document.getElementById('letter-intro');
   const rsvpForm = document.getElementById('rsvp-form');
 
@@ -258,7 +260,9 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  const initialLang = localStorage.getItem('preferredLang') || defaultLang;
+  const initialLang = supportedLangs.includes(requestedLanguage)
+    ? requestedLanguage
+    : localStorage.getItem('preferredLang') || defaultLang;
   applyLanguage(initialLang);
   updateDday();
   window.setInterval(updateDday, 1000);

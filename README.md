@@ -67,6 +67,9 @@ Open `http://localhost:4000/wedding-invitation/` in a browser.
 - The letter intro optionally personalizes its greeting and RSVP name field
 	from a URL such as `?to=Name`. This is client-side and not private; anyone can
 	change the name in the URL.
+- The starting language can be selected with `?language=ko` or `?language=tw`.
+	The value is case-insensitive, so `?language=TW` works too. Both parameters
+	can be combined, for example `?to=Name&language=tw`.
 - Edit `extra.guest_note` in both language sections of `_data/wedding.yml` to
 	change the personalized letter message. Keep `{guest}` where the guest name
 	should appear.
