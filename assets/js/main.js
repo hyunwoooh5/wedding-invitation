@@ -41,6 +41,15 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
+  function updatePageDescription(lang) {
+    const description = weddingData[lang]?.description;
+    if (typeof description !== 'string') {
+      return;
+    }
+    document.getElementById('page-description')?.setAttribute('content', description);
+    document.getElementById('og-page-description')?.setAttribute('content', description);
+  }
+
   function applyLanguage(lang) {
     if (!supportedLangs.includes(lang)) {
       lang = defaultLang;
@@ -49,6 +58,7 @@ document.addEventListener('DOMContentLoaded', function () {
     document.documentElement.lang = htmlLangByLanguage[lang];
     document.documentElement.className = languageClassByLanguage[lang];
     localStorage.setItem('preferredLang', lang);
+    updatePageDescription(lang);
 
     document.querySelectorAll('[data-key]').forEach((element) => {
       const value = getValueByPath(weddingData[lang], element.dataset.key);
@@ -260,9 +270,12 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
+  const pageLanguage = document.documentElement.dataset.initialLanguage;
   const initialLang = supportedLangs.includes(requestedLanguage)
     ? requestedLanguage
-    : localStorage.getItem('preferredLang') || defaultLang;
+    : supportedLangs.includes(pageLanguage)
+      ? pageLanguage
+      : localStorage.getItem('preferredLang') || defaultLang;
   applyLanguage(initialLang);
   updateDday();
   window.setInterval(updateDday, 1000);

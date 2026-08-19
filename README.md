@@ -70,6 +70,9 @@ Open `http://localhost:4000/wedding-invitation/` in a browser.
 - The starting language can be selected with `?language=ko` or `?language=tw`.
 	The value is case-insensitive, so `?language=TW` works too. Both parameters
 	can be combined, for example `?to=Name&language=tw`.
+- The direct language pages are `/wedding-invitation/kr/` and
+	`/wedding-invitation/tw/`. Share `/wedding-invitation/tw/` for Taiwanese
+	chat previews; it contains Taiwanese metadata and content without a redirect.
 - Edit `extra.guest_note` in both language sections of `_data/wedding.yml` to
 	change the personalized letter message. Keep `{guest}` where the guest name
 	should appear.
