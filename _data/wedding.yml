@@ -28,6 +28,7 @@ ko:
     description: "편안하고 아름다운 분위기의 예식장에서
       두 사람의 새로운 출발을 함께 축복해 주세요."
     map_url: "https://map.naver.com/v5/"
+    map_embed_url: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.6044420853327!2d126.97748307611243!3d37.56438222425128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca2f146af4e39%3A0xe28f4800e1b8a3c5!2sThe%20Westin%20Josun%20Seoul!5e0!3m2!1sen!2sus!4v1787111398602!5m2!1sen!2sus"
     map_image: "/assets/images/venue-map.png"
     map_image_alt: "예식장 위치 지도"
     parking_map: "/assets/images/parking-map.png"
@@ -128,6 +129,7 @@ tw:
     description: "誠摯邀請您蒞臨婚宴會館，
       一起見證我們共同生活的美好開始。"
     map_url: "https://map.naver.com/v5/"
+    map_embed_url: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.6044420853327!2d126.97748307611243!3d37.56438222425128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca2f146af4e39%3A0xe28f4800e1b8a3c5!2sThe%20Westin%20Josun%20Seoul!5e0!3m2!1sen!2sus!4v1787111398602!5m2!1sen!2sus"
     map_image: "/assets/images/venue-map.png"
     map_image_alt: "婚宴會館位置地圖"
     parking_map: "/assets/images/parking-map.png"

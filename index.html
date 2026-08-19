@@ -74,7 +74,7 @@ description: "함께 축복해 주실 소중한 분들을 위한 웨딩 초대�
   </div>
   <div class="venue-card">
     <div class="venue-map">
-      <img src="{{ site.baseurl }}{{ wedding.venue.map_image }}" alt="{{ wedding.venue.map_image_alt }}" data-key="venue.map_image_alt" />
+      <iframe src="{{ wedding.venue.map_embed_url }}" title="{{ wedding.venue.map_image_alt }}" loading="lazy" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
     </div>
     <div class="venue-details">
       <p><strong data-key="page.sections.venue_name_label">{{ wedding.page.sections.venue_name_label }}</strong> <span data-key="venue.name">{{ wedding.venue.name }}</span></p>
