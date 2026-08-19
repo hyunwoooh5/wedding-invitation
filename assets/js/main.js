@@ -11,6 +11,9 @@ document.addEventListener('DOMContentLoaded', function () {
   const weddingData = window.weddingData || {};
   const weddingDateString = '2026-12-05T12:00:00';
   const weddingDate = new Date(weddingDateString);
+  const guestName = new URLSearchParams(window.location.search).get('to')?.trim().slice(0, 80) || '';
+  const letterIntro = document.getElementById('letter-intro');
+  const rsvpForm = document.getElementById('rsvp-form');
 
   function getValueByPath(object, path) {
     return path.split(/\.|\[|\]/).filter(Boolean).reduce((current, key) => {
@@ -58,7 +61,30 @@ document.addEventListener('DOMContentLoaded', function () {
       langToggle.textContent = lang === 'ko' ? 'TW' : 'KR';
     }
 
+    const recipient = document.querySelector('.letter-recipient');
+    if (recipient) {
+      const fallback = recipient.dataset.defaultRecipient || '친애하는 소중한 분께';
+      recipient.textContent = guestName
+        ? `${lang === 'ko' ? '친애하는' : '親愛的'} ${guestName}${lang === 'ko' ? '님께' : '，'}`
+        : (lang === 'ko' ? fallback : '親愛的朋友，');
+    }
+
+    document.querySelectorAll('[data-guest-name]').forEach((element) => {
+      if (guestName && !element.value) {
+        element.value = guestName;
+      }
+    });
+
+    const letterMessage = document.querySelector('.letter-message');
+    const guestLabel = guestName || (lang === 'ko' ? '소중한 분' : '親愛的朋友');
+    const guestNote = getValueByPath(weddingData[lang], 'extra.guest_note');
+    if (letterMessage && typeof guestNote === 'string') {
+      letterMessage.textContent = guestNote.replaceAll('{guest}', guestLabel);
+    }
+
     updateDday();
+    updateCalendarLink(lang);
+    updateAppleCalendarLink(lang);
     console.debug(`Applied language: ${lang}`);
   }
 
@@ -69,8 +95,69 @@ document.addEventListener('DOMContentLoaded', function () {
     const diffDays = Math.floor((utcWedding - utcToday) / (1000 * 60 * 60 * 24));
     const ddayElement = document.getElementById('dday-count');
     if (ddayElement) {
-      ddayElement.textContent = diffDays >= 0 ? `D-${diffDays}` : `D+${Math.abs(diffDays)}`;
+      const diffMs = weddingDate.getTime() - Date.now();
+      const absoluteSeconds = Math.floor(Math.abs(diffMs) / 1000);
+      const days = Math.floor(absoluteSeconds / 86400);
+      const hours = Math.floor((absoluteSeconds % 86400) / 3600);
+      const minutes = Math.floor((absoluteSeconds % 3600) / 60);
+      const seconds = absoluteSeconds % 60;
+      const prefix = diffMs >= 0 ? 'D-' : 'D+';
+      ddayElement.textContent = `${prefix}${days} ${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
     }
+  }
+
+  function updateCalendarLink(lang) {
+    const calendarLink = document.getElementById('calendar-link');
+    const languageData = weddingData[lang] || weddingData[defaultLang];
+    const calendar = languageData?.extra?.calendar;
+    if (!calendarLink || !calendar) {
+      return;
+    }
+    const params = new URLSearchParams({
+      action: 'TEMPLATE',
+      text: `${languageData.couple.groom} & ${languageData.couple.bride}`,
+      dates: `${calendar.start}/${calendar.end}`,
+      details: calendar.details,
+      location: languageData.venue.address
+    });
+    calendarLink.href = `https://calendar.google.com/calendar/render?${params.toString()}`;
+  }
+
+  function updateAppleCalendarLink(lang) {
+    const appleCalendarLink = document.getElementById('apple-calendar-link');
+    const languageData = weddingData[lang] || weddingData[defaultLang];
+    const calendar = languageData?.extra?.calendar;
+    if (!appleCalendarLink || !calendar) {
+      return;
+    }
+    const ics = [
+      'BEGIN:VCALENDAR',
+      'VERSION:2.0',
+      'PRODID:-//Wedding Invitation//EN',
+      'BEGIN:VEVENT',
+      `DTSTART:${calendar.start}`,
+      `DTEND:${calendar.end}`,
+      `SUMMARY:${languageData.couple.groom} & ${languageData.couple.bride}`,
+      `DESCRIPTION:${calendar.details}`,
+      `LOCATION:${languageData.venue.address}`,
+      'END:VEVENT',
+      'END:VCALENDAR'
+    ].join('\r\n');
+    if (appleCalendarLink.dataset.objectUrl) {
+      URL.revokeObjectURL(appleCalendarLink.dataset.objectUrl);
+    }
+    const objectUrl = URL.createObjectURL(new Blob([ics], { type: 'text/calendar;charset=utf-8' }));
+    appleCalendarLink.href = objectUrl;
+    appleCalendarLink.dataset.objectUrl = objectUrl;
+  }
+
+  function closeLetter() {
+    if (!letterIntro) {
+      return;
+    }
+    letterIntro.classList.add('is-open');
+    document.body.classList.remove('letter-locked');
+    sessionStorage.setItem('letterOpened', 'true');
   }
 
   function showGalleryImage(index) {
@@ -114,6 +201,38 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  document.getElementById('letter-open')?.addEventListener('click', closeLetter);
+  document.getElementById('letter-skip')?.addEventListener('click', closeLetter);
+  if (letterIntro && sessionStorage.getItem('letterOpened') === 'true') {
+    closeLetter();
+  } else if (letterIntro) {
+    document.body.classList.add('letter-locked');
+  }
+
+  rsvpForm?.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    const status = document.getElementById('rsvp-status');
+    const endpoint = rsvpForm.dataset.endpoint?.trim();
+    if (!endpoint) {
+      status.textContent = 'RSVP endpoint is not configured yet.';
+      return;
+    }
+    const submitButton = rsvpForm.querySelector('button[type="submit"]');
+    submitButton.disabled = true;
+    try {
+      const response = await fetch(endpoint, { method: 'POST', body: new FormData(rsvpForm) });
+      if (!response.ok) {
+        throw new Error('RSVP request failed');
+      }
+      status.textContent = weddingData[localStorage.getItem('preferredLang') || defaultLang].rsvp.success;
+      rsvpForm.reset();
+    } catch (error) {
+      status.textContent = 'Unable to send RSVP. Please contact the couple directly.';
+    } finally {
+      submitButton.disabled = false;
+    }
+  });
+
   document.querySelectorAll('.gallery-item').forEach((item, index) => {
     item.addEventListener('click', () => openGallery(index));
   });
@@ -142,4 +261,5 @@ document.addEventListener('DOMContentLoaded', function () {
   const initialLang = localStorage.getItem('preferredLang') || defaultLang;
   applyLanguage(initialLang);
   updateDday();
+  window.setInterval(updateDday, 1000);
 });

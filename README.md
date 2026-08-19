@@ -64,6 +64,35 @@ Open `http://localhost:4000/wedding-invitation/` in a browser.
 - `index.html` renders the initial Korean content and attaches translation keys
 	with `data-key` attributes.
 - `assets/css/style.css` controls the visual design.
+- The letter intro optionally personalizes its greeting and RSVP name field
+	from a URL such as `?to=Name`. This is client-side and not private; anyone can
+	change the name in the URL.
+- Edit `extra.guest_note` in both language sections of `_data/wedding.yml` to
+	change the personalized letter message. Keep `{guest}` where the guest name
+	should appear.
+- The Google Calendar button opens a pre-filled event. The Apple Calendar button
+	downloads an `.ics` calendar file that can be opened by Apple Calendar.
+
+## RSVP Endpoint
+
+GitHub Pages cannot receive form submissions itself. Set `extra.rsvp_endpoint`
+in both language sections of `_data/wedding.yml` to a public HTTPS endpoint.
+
+### Google Apps Script
+
+1. Create a Google Sheet for responses and open **Extensions > Apps Script**.
+2. Add a `doPost` function that reads `name`, `attendance`, and `message` from
+	 `e.parameter`, then appends them to the sheet.
+3. Deploy it as a web app with **Execute as: Me** and **Who has access: Anyone**.
+4. Copy the `/exec` URL into `ko.extra.rsvp_endpoint` and `tw.extra.rsvp_endpoint`.
+5. Rebuild and deploy the Jekyll site.
+
+The browser sends the RSVP as a `POST` request using `FormData`. Do not put
+private API keys or credentials in the repository; the endpoint URL is visible
+to anyone who can view the page.
+
+Formspree can be used instead by creating a form and placing its HTTPS endpoint
+in the same `rsvp_endpoint` fields.
 
 ## Troubleshooting
 

@@ -43,6 +43,44 @@ ko:
 
   extra:
     attire: "편안한 정장 또는 단정한 복장을 권장합니다."
+    guest_note: "{guest}님, 저희의 소중한 날에 함께해 주셔서 감사합니다."
+    calendar:
+      start: "20261205T030000Z"
+      end: "20261205T060000Z"
+      details: "함께 걷는 새로운 시작"
+    rsvp_endpoint: ""
+
+  story:
+    - date: "2022.03"
+      title: "처음 만난 날"
+      description: "두 사람의 이야기가 시작된 따뜻한 봄날입니다."
+    - date: "2024.06"
+      title: "함께한 약속"
+      description: "서로의 가장 좋은 친구가 되어 같은 미래를 바라보기 시작했습니다."
+    - date: "2026.12"
+      title: "새로운 시작"
+      description: "이제 평생을 함께 걸어가려 합니다."
+
+  dress_code:
+    description: "편안하고 단정한 복장으로 함께해 주세요."
+    palette:
+      - name: "네이비"
+        color: "#28384d"
+      - name: "차콜"
+        color: "#4c4b4a"
+      - name: "아이보리"
+        color: "#eee5d5"
+
+  rsvp:
+    deadline: "2026년 11월 21일"
+    name_label: "성함"
+    attendance_label: "참석 여부"
+    attending: "참석합니다"
+    unavailable: "참석이 어렵습니다"
+    message_label: "신랑 신부에게 전할 말"
+    submit: "회신 보내기"
+    success: "소중한 회신이 전달되었습니다. 감사합니다."
+    endpoint_note: "회신 기능을 연결하려면 Google Apps Script 또는 Formspree 주소를 설정해 주세요."
 
   gallery:
     - src: "/assets/images/cover.svg"
@@ -70,6 +108,8 @@ ko:
       contact_groom: "신랑에게 연락"
       contact_bride: "신부에게 연락"
       view_map: "지도 보기"
+      add_calendar: "Google 캘린더에 추가"
+      add_apple_calendar: "Apple 캘린더에 추가"
       gallery_previous: "‹"
       gallery_next: "›"
       gallery_close: "×"
@@ -87,7 +127,7 @@ ko:
       contact_title: "연락"
       contact_subtitle: "문의가 있으시면 연락 주세요."
       note: "추가 문의 사항은 언제든지 연락 주세요."
-      countdown: "결혼식까지 <span id=\"dday-count\">0</span>일 남았습니다."
+      countdown: "결혼식까지 <span id=\"dday-count\">0</span> 남았습니다."
       map_placeholder: "지도 영역: 정적 사이트에서는 이미지 또는 링크를 넣어주세요."
       venue_name_label: "예식장:"
       venue_address_label: "주소:"
@@ -98,6 +138,11 @@ ko:
       parking_description: "예식장 주변 주차 위치를 확인해 주세요."
       metro_title: "대중교통 안내"
       metro_description: "지하철역에서 예식장까지 오는 길을 확인해 주세요."
+      story_title: "우리의 이야기"
+      story_subtitle: "우리의 시간이 지금의 우리를 만들었습니다."
+      dress_code_title: "드레스 코드"
+      rsvp_title: "RSVP"
+      rsvp_deadline_label: "회신 기한"
 
 tw:
   couple:
@@ -144,6 +189,44 @@ tw:
 
   extra:
     attire: "建議穿著正式或整潔的服裝。"
+    guest_note: "{guest}，謝謝您願意在我們重要的日子與我們分享喜悅。"
+    calendar:
+      start: "20261205T030000Z"
+      end: "20261205T060000Z"
+      details: "一起走向新的開始"
+    rsvp_endpoint: ""
+
+  story:
+    - date: "2022.03"
+      title: "初次相遇"
+      description: "兩人的故事，在一個溫暖的春日開始。"
+    - date: "2024.06"
+      title: "我們的約定"
+      description: "成為彼此最好的朋友，一起望向相同的未來。"
+    - date: "2026.12"
+      title: "新的開始"
+      description: "從今天起，我們要一起走過往後的人生。"
+
+  dress_code:
+    description: "邀請您穿著舒適、整潔的服裝一同出席。"
+    palette:
+      - name: "深藍"
+        color: "#28384d"
+      - name: "炭灰"
+        color: "#4c4b4a"
+      - name: "象牙白"
+        color: "#eee5d5"
+
+  rsvp:
+    deadline: "2026年11月21日"
+    name_label: "姓名"
+    attendance_label: "是否出席"
+    attending: "我會出席"
+    unavailable: "無法出席"
+    message_label: "給新人的祝福"
+    submit: "送出回覆"
+    success: "已收到您的回覆，謝謝您。"
+    endpoint_note: "請設定 Google Apps Script 或 Formspree 網址以啟用回覆功能。"
 
   gallery:
     - src: "/assets/images/cover.svg"
@@ -171,6 +254,8 @@ tw:
       contact_groom: "聯絡新郎"
       contact_bride: "聯絡新娘"
       view_map: "查看地圖"
+      add_calendar: "加入 Google 日曆"
+      add_apple_calendar: "加入 Apple 日曆"
       gallery_previous: "‹"
       gallery_next: "›"
       gallery_close: "×"
@@ -199,3 +284,8 @@ tw:
       parking_description: "請參考婚宴會館周邊的停車位置。"
       metro_title: "大眾運輸資訊"
       metro_description: "請參考從捷運站前往婚宴會館的路線。"
+      story_title: "我們的故事"
+      story_subtitle: "一路走來的時光，成就了現在的我們。"
+      dress_code_title: "服裝色系"
+      rsvp_title: "出席回覆"
+      rsvp_deadline_label: "回覆期限"

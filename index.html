@@ -22,6 +22,16 @@ description: "함께 축복해 주실 소중한 분들을 위한 웨딩 초대�
   </div>
 </section>
 
+<section id="letter-intro" class="letter-intro" aria-label="초대장 열기">
+  <div class="letter-seal" aria-hidden="true">C · Y</div>
+  <p class="letter-kicker">a letter for you</p>
+  <p class="letter-recipient" data-default-recipient="친애하는 소중한 분께">친애하는 소중한 분께</p>
+  <p class="letter-message" data-key="extra.guest_note">소중한 분님, 저희의 소중한 날에 함께해 주셔서 감사합니다.</p>
+  <p class="letter-prompt">가볍게 터치해 편지를 열어주세요</p>
+  <button id="letter-open" class="btn" type="button">초대장 열기</button>
+  <button id="letter-skip" class="letter-skip" type="button">건너뛰기</button>
+</section>
+
 <section id="details" class="section-block">
   <div class="section-head">
     <h2 data-key="page.sections.details_title">{{ wedding.page.sections.details_title }}</h2>
@@ -64,6 +74,41 @@ description: "함께 축복해 주실 소중한 분들을 위한 웨딩 초대�
   </div>
   <div class="countdown" data-key="page.sections.countdown" data-preserve-html="true">
     결혼식까지 <span id="dday-count">0</span>일 남았습니다.
+  </div>
+  <a class="btn calendar-link" id="calendar-link" href="#" target="_blank" rel="noopener" data-key="page.buttons.add_calendar">Google 캘린더에 추가</a>
+  <a class="btn btn-secondary calendar-link" id="apple-calendar-link" href="#" download="wedding-invitation.ics" data-key="page.buttons.add_apple_calendar">Apple 캘린더에 추가</a>
+</section>
+
+<section id="story" class="section-block">
+  <div class="section-head">
+    <h2 data-key="page.sections.story_title">우리의 이야기</h2>
+    <p data-key="page.sections.story_subtitle">우리의 시간이 지금의 우리를 만들었습니다.</p>
+  </div>
+  <div class="story-timeline">
+    {% for item in wedding.story %}
+    <article class="story-item">
+      <p class="story-date" data-key="story[{{ forloop.index0 }}].date">{{ item.date }}</p>
+      <div>
+        <h3 data-key="story[{{ forloop.index0 }}].title">{{ item.title }}</h3>
+        <p data-key="story[{{ forloop.index0 }}].description">{{ item.description }}</p>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+
+<section id="dress-code" class="section-block dress-code-block">
+  <div class="section-head">
+    <h2 data-key="page.sections.dress_code_title">服裝色系</h2>
+    <p data-key="dress_code.description">{{ wedding.dress_code.description }}</p>
+  </div>
+  <div class="palette-grid">
+    {% for item in wedding.dress_code.palette %}
+    <div class="palette-item">
+      <span class="palette-swatch" style="--swatch: {{ item.color }}" aria-hidden="true"></span>
+      <span data-key="dress_code.palette[{{ forloop.index0 }}].name">{{ item.name }}</span>
+    </div>
+    {% endfor %}
   </div>
 </section>
 
@@ -138,4 +183,23 @@ description: "함께 축복해 주실 소중한 분들을 위한 웨딩 초대�
     </div>
   </div>
   <p class="note" data-key="page.sections.note">{{ wedding.page.sections.note }}</p>
+</section>
+
+<section id="rsvp" class="section-block rsvp-block">
+  <div class="section-head">
+    <h2 data-key="page.sections.rsvp_title">출석 회신</h2>
+    <p><span data-key="page.sections.rsvp_deadline_label">회신 기한</span>: <span data-key="rsvp.deadline">{{ wedding.rsvp.deadline }}</span></p>
+  </div>
+  <form id="rsvp-form" class="rsvp-form" data-endpoint="{{ wedding.extra.rsvp_endpoint }}">
+    <label><span data-key="rsvp.name_label">성함</span><input name="name" type="text" required data-guest-name /></label>
+    <fieldset>
+      <legend data-key="rsvp.attendance_label">참석 여부</legend>
+      <label><input name="attendance" type="radio" value="attending" required /> <span data-key="rsvp.attending">참석합니다</span></label>
+      <label><input name="attendance" type="radio" value="unavailable" /> <span data-key="rsvp.unavailable">참석이 어렵습니다</span></label>
+    </fieldset>
+    <label><span data-key="rsvp.message_label">신랑 신부에게 전할 말</span><textarea name="message" rows="4"></textarea></label>
+    <button class="btn" type="submit" data-key="rsvp.submit">회신 보내기</button>
+    <p id="rsvp-status" class="rsvp-status" role="status" aria-live="polite"></p>
+    <p class="rsvp-note" data-key="rsvp.endpoint_note">회신 기능을 연결하려면 Google Apps Script 또는 Formspree 주소를 설정해 주세요.</p>
+  </form>
 </section>
