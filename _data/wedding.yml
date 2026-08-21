@@ -6,7 +6,7 @@ ko:
     date: "2026년 12월 5일 토요일 오후 12시"
     subtitle: "함께 걷는 새로운 시작"
 
-  invitation_title: "우리의 특별한 날에 초대합니다"
+  invitation_title: "우리의 날에 초대합니다"
 
   greeting:
     subtitle: "사랑하는 가족과 친구들을 초대합니다"
@@ -43,6 +43,7 @@ ko:
     venue_phone: "02-0000-0000"
 
   extra:
+    initials: "C · Y"
     attire: "편안한 정장 또는 단정한 복장을 권장합니다."
     guest_note: "{guest}님, 저희의 소중한 날에 함께해 주셔서 감사합니다."
     calendar:
@@ -194,6 +195,7 @@ tw:
     venue_phone: "02-0000-0000"
 
   extra:
+    initials: "C · Y"
     attire: "建議穿著正式或整潔的服裝。"
     guest_note: "{guest}，謝謝您願意在我們重要的日子與我們分享喜悅。"
     calendar:

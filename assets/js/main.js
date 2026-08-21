@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const guestName = queryParams.get('to')?.trim().slice(0, 80) || '';
   const requestedLanguage = queryParams.get('language')?.trim().toLowerCase();
   const letterIntro = document.getElementById('letter-intro');
+  const envelopeScene = document.getElementById('envelope-open');
   const rsvpForm = document.getElementById('rsvp-form');
 
   function getValueByPath(object, path) {
@@ -167,9 +168,37 @@ document.addEventListener('DOMContentLoaded', function () {
     if (!letterIntro) {
       return;
     }
-    letterIntro.classList.add('is-open');
-    document.body.classList.remove('letter-locked');
-    sessionStorage.setItem('letterOpened', 'true');
+    if (letterIntro.classList.contains('is-open') || letterIntro.classList.contains('is-closing')) {
+      return;
+    }
+    letterIntro.classList.add('is-closing');
+    envelopeScene?.classList.add('is-opening');
+    window.setTimeout(() => {
+      letterIntro.classList.add('is-open');
+      letterIntro.classList.remove('is-closing');
+      document.body.classList.remove('letter-locked');
+      sessionStorage.setItem('letterOpened', 'true');
+    }, 2200);
+  }
+
+  function initReveals() {
+    const revealElements = document.querySelectorAll('.reveal');
+    if (!('IntersectionObserver' in window)) {
+      revealElements.forEach((element) => element.classList.add('is-visible'));
+      return;
+    }
+
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) {
+          return;
+        }
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      });
+    }, { threshold: 0.16, rootMargin: '0px 0px -8% 0px' });
+
+    revealElements.forEach((element) => revealObserver.observe(element));
   }
 
   function showGalleryImage(index) {
@@ -215,11 +244,21 @@ document.addEventListener('DOMContentLoaded', function () {
 
   document.getElementById('letter-open')?.addEventListener('click', closeLetter);
   document.getElementById('letter-skip')?.addEventListener('click', closeLetter);
+  envelopeScene?.addEventListener('click', closeLetter);
+  envelopeScene?.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      closeLetter();
+    }
+  });
   if (letterIntro && sessionStorage.getItem('letterOpened') === 'true') {
-    closeLetter();
+    letterIntro.classList.add('is-open');
+    document.body.classList.remove('letter-locked');
   } else if (letterIntro) {
     document.body.classList.add('letter-locked');
   }
+
+  initReveals();
 
   rsvpForm?.addEventListener('submit', async (event) => {
     event.preventDefault();

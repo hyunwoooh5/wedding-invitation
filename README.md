@@ -44,9 +44,10 @@ Open `http://localhost:4000/wedding-invitation/` in a browser.
 ## Notes
 
 - `_data/wedding.yml` contains all Korean and Taiwanese Mandarin text.
-- Typography is language-aware: Korean content and its invitation title use
-	Pretendard, Taiwanese Mandarin uses Noto Serif TC, and English titles use
-	Great Vibes.
+- Typography is language-aware: Korean content uses Noto Serif KR with Nanum
+	Myeongjo for the cover title, Taiwanese Mandarin uses Noto Serif TC, and
+	English accent text uses Cormorant Garamond or Great Vibes. These serif faces
+	are chosen for the formal, editorial feel commonly used in wedding stationery.
 - Add gallery images to `assets/images/`, then add one `src` and `alt` entry
 	for each image under both `ko.gallery` and `tw.gallery`. The gallery has no
 	visible captions; clicking an image opens the expanded viewer.
@@ -76,6 +77,12 @@ Open `http://localhost:4000/wedding-invitation/` in a browser.
 - Edit `extra.guest_note` in both language sections of `_data/wedding.yml` to
 	change the personalized letter message. Keep `{guest}` where the guest name
 	should appear.
+- Edit `extra.initials` in both language sections of `_data/wedding.yml` to
+	change the characters printed on the envelope card and wax seal. For example,
+	change `C · Y` to `J · M`. The middle dot is only decorative punctuation; the
+	value represents the couple's initials. The phrase `a letter for you` means
+	"a letter intended for you" and is separate from the initials; there is no
+	`e · y` value in the source.
 - The Google Calendar button opens a pre-filled event. The Apple Calendar button
 	downloads an `.ics` calendar file that can be opened by Apple Calendar.
 
