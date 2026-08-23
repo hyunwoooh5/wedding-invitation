@@ -10,8 +10,6 @@ and Taiwanese Mandarin (Traditional Chinese), switched with the `TW` button.
 3. Add your wedding details to `_data/wedding.yml`.
 4. Replace image files under `assets/images/`.
 5. Update `url` and `baseurl` in `_config.yml` for your GitHub Pages site.
-6. Replace `contact.groom_url` and `contact.bride_url` in both language
-	sections with the couple's KakaoTalk or LINE profile links.
 
 The translation keys are `ko` for Korean and `tw` for Taiwanese Mandarin.
 Keep the same keys in both sections when adding or removing invitation text.
@@ -52,13 +50,8 @@ Open `http://localhost:4000/wedding-invitation/` in a browser.
 	for each image under both `ko.gallery` and `tw.gallery`. The gallery has no
 	visible captions; clicking an image opens the expanded viewer.
 - Set `venue.map_embed_url` in both language sections to the Google Maps embed
-	URL for the venue. The venue map is rendered as a responsive iframe. Add the
-	parking and metro map images to `assets/images/` using the filenames
-	`parking-map.png` and `metro-map.png`, or change the matching
-	`venue.parking_map` and `venue.metro_map` values. Update the matching
-	`*_map_alt` values to describe each image.
-- `contact.groom_url` and `contact.bride_url` accept external KakaoTalk or
-	LINE links. The same contact URLs should be kept in both language sections.
+	URL for the venue. The venue map is rendered as a responsive iframe, and
+	`venue.map_url` controls the external map button.
 - `_layouts/default.html` defines the shared page shell and language button.
 - `assets/js/main.js` applies translations and stores the selected language in
 	browser `localStorage` under `preferredLang`.
@@ -85,6 +78,8 @@ Open `http://localhost:4000/wedding-invitation/` in a browser.
 	`e · y` value in the source.
 - The Google Calendar button opens a pre-filled event. The Apple Calendar button
 	downloads an `.ics` calendar file that can be opened by Apple Calendar.
+- The current visual theme uses a light-blue palette. The visible invitation
+	sections are the envelope intro, cover, gallery, venue map, and RSVP form.
 
 ## RSVP Endpoint
 

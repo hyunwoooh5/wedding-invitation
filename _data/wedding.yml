@@ -6,44 +6,27 @@ ko:
     date: "2026년 12월 5일 토요일 오후 12시"
     subtitle: "함께 걷는 새로운 시작"
 
-  invitation_title: "우리의 날에 초대합니다"
-
-  greeting:
-    subtitle: "사랑하는 가족과 친구들을 초대합니다"
-    message: |
-      우리의 사랑을 축복해 주시기 위해
-      소중한 분들을 초대합니다.
-      따뜻한 마음으로 함께 해주시면 감사하겠습니다.
-
-  parents:
-    - name: "신랑 부모님"
-      relation: "의 장남"
-      child: "신랑 이름"
-    - name: "신부 부모님"
-      relation: "의 장녀"
-      child: "신부 이름"
-
   venue:
     name: "서울 웨딩홀"
     address: "서울시 강남구 예식로 100"
     description: "편안하고 아름다운 분위기의 예식장에서
       두 사람의 새로운 출발을 함께 축복해 주세요."
+    directions: "지도를 참고해 편안하게 방문해 주세요."
     map_url: "https://map.naver.com/v5/"
     map_embed_url: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.6044420853327!2d126.97748307611243!3d37.56438222425128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca2f146af4e39%3A0xe28f4800e1b8a3c5!2sThe%20Westin%20Josun%20Seoul!5e0!3m2!1sen!2sus!4v1787111398602!5m2!1sen!2sus"
     map_image: "/assets/images/venue-map.png"
     map_image_alt: "예식장 위치 지도"
-    parking_map: "/assets/images/parking-map.png"
-    parking_map_alt: "예식장 주변 주차 안내 지도"
-    metro_map: "/assets/images/metro-map.png"
-    metro_map_alt: "지하철역에서 예식장까지 오는 길 안내 지도"
-
   contact:
-    groom_url: "https://open.kakao.com/o/your-groom-link"
-    bride_url: "https://line.me/ti/p/your-bride-id"
     venue_phone: "02-0000-0000"
 
   extra:
     initials: "C · Y"
+    cover_image:
+      src: "/assets/images/cover.svg"
+      alt: "커플 사진"
+    calendar_image:
+      src: "/assets/images/cover.svg"
+      alt: "결혼식 일정 이미지"
     attire: "편안한 정장 또는 단정한 복장을 권장합니다."
     guest_note: "{guest}님, 저희의 소중한 날에 함께해 주셔서 감사합니다."
     calendar:
@@ -51,27 +34,6 @@ ko:
       end: "20261205T060000Z"
       details: "함께 걷는 새로운 시작"
     rsvp_endpoint: ""
-
-  story:
-    - date: "2022.03"
-      title: "처음 만난 날"
-      description: "두 사람의 이야기가 시작된 따뜻한 봄날입니다."
-    - date: "2024.06"
-      title: "함께한 약속"
-      description: "서로의 가장 좋은 친구가 되어 같은 미래를 바라보기 시작했습니다."
-    - date: "2026.12"
-      title: "새로운 시작"
-      description: "이제 평생을 함께 걸어가려 합니다."
-
-  dress_code:
-    description: "편안하고 단정한 복장으로 함께해 주세요."
-    palette:
-      - name: "네이비"
-        color: "#28384d"
-      - name: "차콜"
-        color: "#4c4b4a"
-      - name: "아이보리"
-        color: "#eee5d5"
 
   rsvp:
     deadline: "2026년 11월 21일"
@@ -101,14 +63,9 @@ ko:
   page:
     nav:
       cover: "초대"
-      details: "예식 정보"
       venue: "예식장"
       gallery: "갤러리"
-      contact: "연락"
     buttons:
-      view_invitation: "초대장 보기"
-      contact_groom: "신랑에게 연락"
-      contact_bride: "신부에게 연락"
       view_map: "지도 보기"
       add_calendar: "Google 캘린더에 추가"
       add_apple_calendar: "Apple 캘린더에 추가"
@@ -120,33 +77,13 @@ ko:
       open: "초대장 열기"
       skip: "건너뛰기"
     sections:
-      details_title: "Invitation"
-      details_subtitle: "소중한 분들을 초대합니다"
-      event_title: "결혼식 정보"
-      event_subtitle: "함께 해주세요"
-      event_date_title: "일시"
-      event_venue_title: "장소"
-      event_attire_title: "예복"
       venue_title: "예식장 안내"
       gallery_title: "갤러리"
       gallery_subtitle: "우리의 순간을 미리 느껴보세요."
-      contact_title: "연락"
-      contact_subtitle: "문의가 있으시면 연락 주세요."
-      note: "추가 문의 사항은 언제든지 연락 주세요."
       countdown: "결혼식까지 <span id=\"dday-count\">0</span> 남았습니다."
-      map_placeholder: "지도 영역: 정적 사이트에서는 이미지 또는 링크를 넣어주세요."
       venue_name_label: "예식장:"
       venue_address_label: "주소:"
       venue_phone_label: "전화:"
-      groom_label: "신랑"
-      bride_label: "신부"
-      parking_title: "주차 안내"
-      parking_description: "예식장 주변 주차 위치를 확인해 주세요."
-      metro_title: "대중교통 안내"
-      metro_description: "지하철역에서 예식장까지 오는 길을 확인해 주세요."
-      story_title: "우리의 이야기"
-      story_subtitle: "우리의 시간이 지금의 우리를 만들었습니다."
-      dress_code_title: "드레스 코드"
       rsvp_title: "RSVP"
       rsvp_deadline_label: "회신 기한"
 
@@ -158,44 +95,27 @@ tw:
     date: "2026年12月5日（星期六）中午12點"
     subtitle: "一起走向新的開始"
 
-  invitation_title: "誠摯邀請您參加我們的重要日子"
-
-  greeting:
-    subtitle: "邀請您一起參與我們的婚禮"
-    message: |
-      我們誠摯地邀請您參加我們的婚禮。
-      在我們開始共同生活的喜悅日子裡，
-      期待與您一起分享這份幸福。
-
-  parents:
-    - name: "新郎父母"
-      relation: "長子"
-      child: "新郎姓名"
-    - name: "新娘父母"
-      relation: "長女"
-      child: "新娘姓名"
-
   venue:
     name: "首爾婚宴會館"
     address: "首爾市江南區婚禮路100號"
     description: "誠摯邀請您蒞臨婚宴會館，
       一起見證我們共同生活的美好開始。"
+    directions: "請參考地圖，方便前往婚宴會館。"
     map_url: "https://map.naver.com/v5/"
     map_embed_url: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.6044420853327!2d126.97748307611243!3d37.56438222425128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca2f146af4e39%3A0xe28f4800e1b8a3c5!2sThe%20Westin%20Josun%20Seoul!5e0!3m2!1sen!2sus!4v1787111398602!5m2!1sen!2sus"
     map_image: "/assets/images/venue-map.png"
     map_image_alt: "婚宴會館位置地圖"
-    parking_map: "/assets/images/parking-map.png"
-    parking_map_alt: "婚宴會館周邊停車位置地圖"
-    metro_map: "/assets/images/metro-map.png"
-    metro_map_alt: "從捷運站前往婚宴會館的路線地圖"
-
   contact:
-    groom_url: "https://open.kakao.com/o/your-groom-link"
-    bride_url: "https://line.me/ti/p/your-bride-id"
     venue_phone: "02-0000-0000"
 
   extra:
     initials: "C · Y"
+    cover_image:
+      src: "/assets/images/cover.svg"
+      alt: "新人照片"
+    calendar_image:
+      src: "/assets/images/cover.svg"
+      alt: "婚禮日期圖片"
     attire: "建議穿著正式或整潔的服裝。"
     guest_note: "{guest}，謝謝您願意在我們重要的日子與我們分享喜悅。"
     calendar:
@@ -203,27 +123,6 @@ tw:
       end: "20261205T060000Z"
       details: "一起走向新的開始"
     rsvp_endpoint: ""
-
-  story:
-    - date: "2022.03"
-      title: "初次相遇"
-      description: "兩人的故事，在一個溫暖的春日開始。"
-    - date: "2024.06"
-      title: "我們的約定"
-      description: "成為彼此最好的朋友，一起望向相同的未來。"
-    - date: "2026.12"
-      title: "新的開始"
-      description: "從今天起，我們要一起走過往後的人生。"
-
-  dress_code:
-    description: "邀請您穿著舒適、整潔的服裝一同出席。"
-    palette:
-      - name: "深藍"
-        color: "#28384d"
-      - name: "炭灰"
-        color: "#4c4b4a"
-      - name: "象牙白"
-        color: "#eee5d5"
 
   rsvp:
     deadline: "2026年11月21日"
@@ -253,14 +152,9 @@ tw:
   page:
     nav:
       cover: "邀請"
-      details: "婚禮資訊"
       venue: "婚宴會館"
       gallery: "相簿"
-      contact: "聯絡我們"
     buttons:
-      view_invitation: "查看邀請函"
-      contact_groom: "聯絡新郎"
-      contact_bride: "聯絡新娘"
       view_map: "查看地圖"
       add_calendar: "加入 Google 日曆"
       add_apple_calendar: "加入 Apple 日曆"
@@ -272,32 +166,13 @@ tw:
       open: "開啟邀請函"
       skip: "略過"
     sections:
-      details_title: "邀請函"
-      details_subtitle: "誠摯邀請您與我們一同慶祝"
-      event_title: "婚禮資訊"
-      event_subtitle: "期待您的蒞臨"
-      event_date_title: "日期與時間"
-      event_venue_title: "地點"
-      event_attire_title: "服裝"
       venue_title: "婚宴會館資訊"
       gallery_title: "相簿"
       gallery_subtitle: "先睹為快，感受我們的幸福時刻"
-      contact_title: "聯絡我們"
-      contact_subtitle: "如有任何問題，歡迎與我們聯絡。"
-      note: "如有其他問題，歡迎隨時與我們聯絡。"
       countdown: "距離婚禮還有 <span id=\"dday-count\">0</span>"
-      map_placeholder: "地圖區域：靜態網站請放入圖片或地圖連結。"
       venue_name_label: "婚宴會館："
       venue_address_label: "地址："
       venue_phone_label: "電話："
-      groom_label: "新郎"
-      bride_label: "新娘"
-      parking_title: "停車資訊"
-      parking_description: "請參考婚宴會館周邊的停車位置。"
-      metro_title: "大眾運輸資訊"
-      metro_description: "請參考從捷運站前往婚宴會館的路線。"
-      story_title: "我們的故事"
-      story_subtitle: "一路走來的時光，成就了現在的我們。"
       dress_code_title: "服裝色系"
       rsvp_title: "出席回覆"
       rsvp_deadline_label: "回覆期限"
