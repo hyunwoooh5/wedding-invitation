@@ -9,13 +9,60 @@ document.addEventListener('DOMContentLoaded', function () {
   const galleryImages = Array.from(document.querySelectorAll('.gallery-item img'));
   let selectedGalleryIndex = 0;
   const weddingData = window.weddingData || {};
-  const weddingDateString = '2026-12-05T12:00:00';
-  const weddingDate = new Date(weddingDateString);
+  const weddingCalendar = document.getElementById('wedding-calendar');
   const queryParams = new URLSearchParams(window.location.search);
   const guestName = queryParams.get('to')?.trim().slice(0, 80) || '';
   const requestedLanguage = queryParams.get('language')?.trim().toLowerCase();
   const letterIntro = document.getElementById('letter-intro');
   const rsvpForm = document.getElementById('rsvp-form');
+
+  function getWeddingDate(lang) {
+    const start = weddingData[lang]?.extra?.calendar?.start || weddingData[defaultLang]?.extra?.calendar?.start;
+    if (!start) {
+      return new Date('2026-12-05T12:00:00');
+    }
+    const date = new Date(start.replace(/(\d{4})(\d{2})(\d{2})T(\d{2})(\d{2})(\d{2})Z/, '$1-$2-$3T$4:$5:$6Z'));
+    return Number.isNaN(date.getTime()) ? new Date('2026-12-05T12:00:00') : date;
+  }
+
+  function renderCalendar(lang) {
+    if (!weddingCalendar) {
+      return;
+    }
+
+    const languageData = weddingData[lang] || weddingData[defaultLang];
+    const weddingDate = getWeddingDate(lang);
+    const year = weddingDate.getUTCFullYear();
+    const month = weddingDate.getUTCMonth();
+    const day = weddingDate.getUTCDate();
+    const monthLabels = lang === 'tw' ? ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月'] : ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'];
+    const weekdayLabels = lang === 'tw' ? ['日', '一', '二', '三', '四', '五', '六'] : ['일', '월', '화', '수', '목', '금', '토'];
+    const firstWeekday = new Date(Date.UTC(year, month, 1)).getUTCDay();
+    const daysInMonth = new Date(Date.UTC(year, month + 1, 0)).getUTCDate();
+
+    weddingCalendar.querySelector('.calendar-month').textContent = `${year} · ${monthLabels[month]}`;
+    weddingCalendar.querySelector('.calendar-event-mark').textContent = `${month + 1} / ${day}`;
+    weddingCalendar.setAttribute('aria-label', `${year} ${monthLabels[month]}, ${day}`);
+    weddingCalendar.querySelector('caption').textContent = `${year} ${monthLabels[month]} ${day}`;
+    weddingCalendar.querySelector('.calendar-weekdays').innerHTML = weekdayLabels.map((label) => `<th scope="col">${label}</th>`).join('');
+
+    const cells = [];
+    for (let index = 0; index < firstWeekday; index += 1) {
+      cells.push('<td aria-hidden="true"></td>');
+    }
+    for (let date = 1; date <= daysInMonth; date += 1) {
+      const isWeddingDay = date === day;
+      cells.push(`<td${isWeddingDay ? ' class="is-wedding-day"' : ''}${isWeddingDay ? ` aria-label="${languageData.couple.date}"` : ''}>${date}</td>`);
+    }
+    while (cells.length % 7 !== 0) {
+      cells.push('<td aria-hidden="true"></td>');
+    }
+    const rows = [];
+    for (let index = 0; index < cells.length; index += 7) {
+      rows.push(`<tr>${cells.slice(index, index + 7).join('')}</tr>`);
+    }
+    weddingCalendar.querySelector('.calendar-days').innerHTML = rows.join('');
+  }
 
   function getValueByPath(object, path) {
     return path.split(/\.|\[|\]/).filter(Boolean).reduce((current, key) => {
@@ -74,12 +121,14 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     const recipient = document.querySelector('.letter-recipient');
+    /*
     if (recipient) {
       const fallback = recipient.dataset.defaultRecipient || '친애하는 소중한 분께';
       recipient.textContent = guestName
         ? `${lang === 'ko' ? '친애하는' : '親愛的'} ${guestName}${lang === 'ko' ? '님께' : '，'}`
         : (lang === 'ko' ? fallback : '親愛的朋友，');
     }
+    */
 
     document.querySelectorAll('[data-guest-name]').forEach((element) => {
       if (guestName && !element.value) {
@@ -95,12 +144,14 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     updateDday();
+    renderCalendar(lang);
     updateCalendarLink(lang);
     updateAppleCalendarLink(lang);
     console.debug(`Applied language: ${lang}`);
   }
 
   function updateDday() {
+    const weddingDate = getWeddingDate(localStorage.getItem('preferredLang') || defaultLang);
     const today = new Date();
     const utcToday = Date.UTC(today.getFullYear(), today.getMonth(), today.getDate());
     const utcWedding = Date.UTC(weddingDate.getFullYear(), weddingDate.getMonth(), weddingDate.getDate());

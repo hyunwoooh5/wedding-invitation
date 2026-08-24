@@ -3,7 +3,7 @@
 
 <section id="cover" class="cover-section">
   <div class="heart-rain" aria-hidden="true">
-    {% for heart in (1..12) %}<i style="--x: {{ heart | times: 7 | modulo: 96 }}%; --delay: {{ heart | times: 0.9 }}s; --duration: {{ 11 | plus: heart | modulo: 8 }}s; --drift: {{ heart | times: 3 | modulo: 7 | minus: 3 }}rem;"></i>{% endfor %}
+    {% for heart in (1..12) %}<i style="--x: {{ heart | times: 7 | modulo: 96 }}%; --delay: {{ heart | times: 0.9 }}s; --duration: {{ 8 | plus: heart | modulo: 6 | plus: 8 }}s; --drift: {{ heart | times: 3 | modulo: 7 | minus: 3 }}rem;"></i>{% endfor %}
   </div>
   <div class="cover-content reveal reveal-hero">
     <div class="cover-image-slot">
@@ -21,8 +21,16 @@
     </div>
     <h1 class="cover-date" data-key="couple.date">{{ wedding.couple.date }}</h1>
     <p class="cover-sub" data-key="couple.subtitle">{{ wedding.couple.subtitle }}</p>
-    <div class="calendar-image-slot">
-      <img src="{{ site.baseurl }}{{ wedding.extra.calendar_image.src }}" alt="{{ wedding.extra.calendar_image.alt }}" />
+    <div class="calendar-image-slot wedding-calendar" id="wedding-calendar" aria-label="Wedding date calendar">
+      <div class="calendar-heading" aria-hidden="true">
+        <span class="calendar-month"></span>
+        <span class="calendar-event-mark"></span>
+      </div>
+      <table>
+        <caption class="sr-only">Wedding date calendar</caption>
+        <thead><tr class="calendar-weekdays"></tr></thead>
+        <tbody class="calendar-days"></tbody>
+      </table>
     </div>
     <div class="countdown" data-key="page.sections.countdown" data-preserve-html="true">결혼식까지 <span id="dday-count">0</span>일 남았습니다.</div>
     <div class="cover-actions">
@@ -33,7 +41,9 @@
 </section>
 
 <section id="letter-intro" class="letter-intro" role="button" tabindex="0" aria-label="Open invitation">
+{% comment %}
   <p class="letter-recipient" data-default-recipient="친애하는 소중한 분께">친애하는 소중한 분께</p>
+{% endcomment %}
   <p class="letter-message" data-key="extra.guest_note">{{ wedding.extra.guest_note }}</p>
   <p class="letter-prompt" data-key="page.letter.prompt">{{ wedding.page.letter.prompt }}</p>
 </section>

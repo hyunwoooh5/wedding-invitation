@@ -28,7 +28,7 @@ ko:
       src: "/assets/images/cover.svg"
       alt: "결혼식 일정 이미지"
     attire: "편안한 정장 또는 단정한 복장을 권장합니다."
-    guest_note: "{guest}님, 저희의 소중한 날에 함께해 주셔서 감사합니다."
+    guest_note: # "{guest}님, 저희의 소중한 날에 함께해 주셔서 감사합니다."
     calendar:
       start: "20261205T030000Z"
       end: "20261205T060000Z"
@@ -73,7 +73,7 @@ ko:
       gallery_next: "›"
       gallery_close: "×"
     letter:
-      prompt: "가볍게 터치해 편지를 열어주세요"
+      prompt: #"가볍게 터치해 편지를 열어주세요"
       open: "초대장 열기"
       skip: "건너뛰기"
     sections:
@@ -117,7 +117,7 @@ tw:
       src: "/assets/images/cover.svg"
       alt: "婚禮日期圖片"
     attire: "建議穿著正式或整潔的服裝。"
-    guest_note: "{guest}，謝謝您願意在我們重要的日子與我們分享喜悅。"
+    guest_note: #"{guest}，謝謝您願意在我們重要的日子與我們分享喜悅。"
     calendar:
       start: "20261205T030000Z"
       end: "20261205T060000Z"
@@ -162,7 +162,7 @@ tw:
       gallery_next: "›"
       gallery_close: "×"
     letter:
-      prompt: "請輕觸以開啟邀請函"
+      prompt: #"請輕觸以開啟邀請函"
       open: "開啟邀請函"
       skip: "略過"
     sections:
