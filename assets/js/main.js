@@ -227,7 +227,7 @@ document.addEventListener('DOMContentLoaded', function () {
       letterIntro.classList.remove('is-closing');
       document.body.classList.remove('letter-locked');
       sessionStorage.setItem('letterOpened', 'true');
-    }, 2200);
+    }, 0);
   }
 
   function initReveals() {
