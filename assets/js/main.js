@@ -15,7 +15,6 @@ document.addEventListener('DOMContentLoaded', function () {
   const guestName = queryParams.get('to')?.trim().slice(0, 80) || '';
   const requestedLanguage = queryParams.get('language')?.trim().toLowerCase();
   const letterIntro = document.getElementById('letter-intro');
-  const envelopeScene = document.getElementById('envelope-open');
   const rsvpForm = document.getElementById('rsvp-form');
 
   function getValueByPath(object, path) {
@@ -172,7 +171,6 @@ document.addEventListener('DOMContentLoaded', function () {
       return;
     }
     letterIntro.classList.add('is-closing');
-    envelopeScene?.classList.add('is-opening');
     window.setTimeout(() => {
       letterIntro.classList.add('is-open');
       letterIntro.classList.remove('is-closing');
@@ -244,8 +242,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
   document.getElementById('letter-open')?.addEventListener('click', closeLetter);
   document.getElementById('letter-skip')?.addEventListener('click', closeLetter);
-  envelopeScene?.addEventListener('click', closeLetter);
-  envelopeScene?.addEventListener('keydown', (event) => {
+  letterIntro?.addEventListener('click', closeLetter);
+  letterIntro?.addEventListener('keydown', (event) => {
     if (event.key === 'Enter' || event.key === ' ') {
       event.preventDefault();
       closeLetter();
