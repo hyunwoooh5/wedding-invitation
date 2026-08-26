@@ -37,6 +37,7 @@ ko:
 
   rsvp:
     deadline: "2026년 11월 21일"
+    gift_note: "여러분의 축하와 마음만으로도 충분합니다. 금전적인 선물은 정중히 사양합니다."
     name_label: "성함"
     attendance_label: "참석 여부"
     attending: "참석합니다"
@@ -126,6 +127,7 @@ tw:
 
   rsvp:
     deadline: "2026年11月21日"
+    gift_note: "您的祝福與心意就是最珍貴的禮物，恕不收受現金禮金。"
     name_label: "姓名"
     attendance_label: "是否出席"
     attending: "我會出席"

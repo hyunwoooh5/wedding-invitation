@@ -691,6 +691,11 @@ html.lang-en .cover-title {
   margin: 0 auto;
 }
 
+.rsvp-gift-note {
+  color: var(--accent);
+  font-weight: 700;
+}
+
 .rsvp-form label,
 .rsvp-form fieldset {
   display: grid;
@@ -1165,30 +1170,17 @@ html.lang-tw .cover-title {
   position: absolute;
   top: -2rem;
   left: var(--x);
-  width: 0.65rem;
-  height: 0.65rem;
-  background: rgba(114, 169, 194, 0.42);
-  transform: rotate(45deg);
-  animation: heart-fall var(--duration) linear var(--delay) infinite;
+  width: 0.85rem;
+  height: 0.85rem;
+  background: #ffdc52;
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 94%, 50% 72%, 21% 94%, 32% 57%, 2% 35%, 39% 35%);
+  animation: star-fall var(--duration) linear var(--delay) infinite;
 }
 
-.heart-rain i::before,
-.heart-rain i::after {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  background: inherit;
-  content: '';
-}
-
-.heart-rain i::before { left: -50%; }
-.heart-rain i::after { top: -50%; }
-
-@keyframes heart-fall {
-  0% { opacity: 0; transform: translate3d(0, -2rem, 0) rotate(45deg); }
-  12% { opacity: 0.7; }
-  100% { opacity: 0; transform: translate3d(var(--drift), 82vh, 0) rotate(405deg); }
+@keyframes star-fall {
+  0% { opacity: 0; transform: translate3d(0, -2rem, 0) rotate(0deg); } /* stars invisible */
+  12% { opacity: 1; } /* stars become fully visible */
+  100% { opacity: 0.85; transform: translate3d(var(--drift), 82vh, 0) rotate(360deg); } /* The animation ends */
 }
 
 .section-block {
