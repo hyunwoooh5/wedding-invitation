@@ -40,12 +40,32 @@
   </div>
 </section>
 
-<section id="letter-intro" class="letter-intro" role="button" tabindex="0" aria-label="Open invitation">
-{% comment %}
-  <p class="letter-recipient" data-default-recipient="친애하는 소중한 분께">친애하는 소중한 분께</p>
-{% endcomment %}
-  <p class="letter-message" data-key="extra.guest_note">{{ wedding.extra.guest_note }}</p>
-  <p class="letter-prompt" data-key="page.letter.prompt">{{ wedding.page.letter.prompt }}</p>
+<section id="letter-intro" class="letter-intro" role="dialog" aria-modal="true" tabindex="0" aria-label="Open invitation">
+  <div class="portal-stars" aria-hidden="true">
+    <i style="--star-x: 8%; --star-y: 18%; --star-size: 0.24rem; --star-delay: -1s"></i>
+    <i style="--star-x: 19%; --star-y: 68%; --star-size: 0.14rem; --star-delay: -4s"></i>
+    <i style="--star-x: 31%; --star-y: 12%; --star-size: 0.18rem; --star-delay: -2s"></i>
+    <i style="--star-x: 76%; --star-y: 15%; --star-size: 0.14rem; --star-delay: -5s"></i>
+    <i style="--star-x: 88%; --star-y: 32%; --star-size: 0.25rem; --star-delay: -3s"></i>
+    <i style="--star-x: 92%; --star-y: 77%; --star-size: 0.15rem; --star-delay: -1.5s"></i>
+    <i style="--star-x: 11%; --star-y: 88%; --star-size: 0.13rem; --star-delay: -6s"></i>
+    <i style="--star-x: 67%; --star-y: 87%; --star-size: 0.2rem; --star-delay: -3.5s"></i>
+  </div>
+  <div class="portal-moon" aria-hidden="true"></div>
+  <div class="portal-content">
+    <div class="portal-orbit" aria-hidden="true"><span></span><span></span><span></span></div>
+    <p class="portal-kicker" data-key="page.letter.prompt">{{ wedding.page.letter.prompt }}</p>
+    <div class="portal-monogram" data-key="extra.initials">{{ wedding.extra.initials }}</div>
+    <div class="portal-names portal-names-ko">
+      <span>{{ site.data.wedding.ko.couple.groom }} &amp; {{ site.data.wedding.ko.couple.bride }}</span>
+    </div>
+    <div class="portal-names portal-names-tw">
+      <span>{{ site.data.wedding.tw.couple.groom }} &amp; {{ site.data.wedding.tw.couple.bride }}</span>
+    </div>
+    <p class="portal-date" data-key="couple.date">{{ wedding.couple.date }}</p>
+    <p class="letter-message" data-key="extra.guest_note">{{ wedding.extra.guest_note }}</p>
+    <button id="letter-open" class="portal-open" type="button" data-key="page.letter.open">{{ wedding.page.letter.open }}</button>
+  </div>
 </section>
 
 <section id="gallery" class="section-block gallery-block reveal">

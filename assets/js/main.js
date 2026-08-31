@@ -222,12 +222,13 @@ document.addEventListener('DOMContentLoaded', function () {
       return;
     }
     letterIntro.classList.add('is-closing');
+    const closeDelay = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 700;
     window.setTimeout(() => {
       letterIntro.classList.add('is-open');
       letterIntro.classList.remove('is-closing');
       document.body.classList.remove('letter-locked');
       sessionStorage.setItem('letterOpened', 'true');
-    }, 0);
+    }, closeDelay);
   }
 
   function initReveals() {
