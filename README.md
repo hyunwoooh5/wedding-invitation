@@ -50,8 +50,8 @@ Open `http://localhost:4000/wedding-invitation/` in a browser.
 	for each image under both `ko.gallery` and `tw.gallery`. The gallery has no
 	visible captions; clicking an image opens the expanded viewer.
 - Set `venue.map_embed_url` in both language sections to the Google Maps embed
-	URL for the venue. The venue map is rendered as a responsive iframe, and
-	`venue.map_url` controls the external map button.
+	URL for the venue. The venue map is rendered as a responsive iframe, including
+	the option to open the location in Google Maps.
 - `_layouts/default.html` defines the shared page shell and language button.
 - `assets/js/main.js` applies translations and stores the selected language in
 	browser `localStorage` under `preferredLang`.
