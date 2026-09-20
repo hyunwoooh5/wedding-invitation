@@ -39,13 +39,36 @@ bundle exec jekyll serve --baseurl "/wedding-invitation" --livereload
 
 Open `http://localhost:4000/wedding-invitation/` in a browser.
 
+## Typography
+
+The repository separates font loading from font assignment:
+
+- `_layouts/default.html` loads the Google Fonts CSS and keeps the shared HTML shell.
+- `assets/css/style.css` assigns the font families by language and element.
+- The Korean language rules are controlled by selectors such as `html.lang-ko`,
+	`html.lang-ko body`, `.cover-title`, and `.portal-names`.
+- The Taiwanese language rules are controlled by selectors such as `html.lang-tw`
+	and `font-family: 'Wan Jade Song', serif` in the relevant blocks.
+- The English accent text uses `Cormorant Garamond` and `Great Vibes`.
+
+To change a font:
+
+1. Update the `fonts.googleapis.com` stylesheet URL in `_layouts/default.html`.
+2. Update the matching `font-family` values in `assets/css/style.css`.
+3. Reload the page and hard-refresh the browser if the old CSS is still cached.
+4. If the site is served locally, the CSS cache can be bypassed by updating the
+	query string in the stylesheet link, for example `style.css?v=10`.
+
+This project uses the same pattern for all language variants, so it is not
+necessary to restructure the site just to change fonts.
+
 ## Notes
 
 - `_data/wedding.yml` contains all Korean and Taiwanese Mandarin text.
-- Typography is language-aware: Korean content uses Noto Serif KR with Nanum
-	Myeongjo for the cover title, Taiwanese Mandarin uses Noto Serif TC, and
-	English accent text uses Cormorant Garamond or Great Vibes. These serif faces
-	are chosen for the formal, editorial feel commonly used in wedding stationery.
+- Typography is language-aware: Korean content uses Gowun Batang, Taiwanese
+	Mandarin uses Wan Jade Song, and English accent text uses Cormorant Garamond
+	or Great Vibes. These serif faces are chosen for the formal, editorial feel
+	commonly used in wedding stationery.
 - Add gallery images to `assets/images/`, then add one `src` and `alt` entry
 	for each image under both `ko.gallery` and `tw.gallery`. The gallery has no
 	visible captions; clicking an image opens the expanded viewer.

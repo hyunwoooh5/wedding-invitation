@@ -169,6 +169,16 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
+  function getCalendarDetails(calendar) {
+    const invitationUrl = new URL(window.location.href);
+    invitationUrl.hash = '';
+    return `${calendar.details}\n\nWedding invitation: ${invitationUrl.toString()}`;
+  }
+
+  function escapeIcsText(value) {
+    return value.replace(/\\/g, '\\\\').replace(/;/g, '\\;').replace(/,/g, '\\,').replace(/\r?\n/g, '\\n');
+  }
+
   function updateCalendarLink(lang) {
     const calendarLink = document.getElementById('calendar-link');
     const languageData = weddingData[lang] || weddingData[defaultLang];
@@ -180,7 +190,7 @@ document.addEventListener('DOMContentLoaded', function () {
       action: 'TEMPLATE',
       text: `${languageData.couple.groom} & ${languageData.couple.bride}`,
       dates: `${calendar.start}/${calendar.end}`,
-      details: calendar.details,
+      details: getCalendarDetails(calendar),
       location: languageData.venue.address
     });
     calendarLink.href = `https://calendar.google.com/calendar/render?${params.toString()}`;
@@ -201,8 +211,8 @@ document.addEventListener('DOMContentLoaded', function () {
       `DTSTART:${calendar.start}`,
       `DTEND:${calendar.end}`,
       `SUMMARY:${languageData.couple.groom} & ${languageData.couple.bride}`,
-      `DESCRIPTION:${calendar.details}`,
-      `LOCATION:${languageData.venue.address}`,
+      `DESCRIPTION:${escapeIcsText(getCalendarDetails(calendar))}`,
+      `LOCATION:${escapeIcsText(languageData.venue.address)}`,
       'END:VEVENT',
       'END:VCALENDAR'
     ].join('\r\n');

@@ -24,11 +24,11 @@ body {
 }
 
 html.lang-ko {
-  font-family: 'Pretendard', sans-serif;
+  font-family: 'Gowun Batang', serif;
 }
 
 html.lang-tw {
-  font-family: 'Noto Serif TC', serif;
+  font-family: 'Wan Jade Song', serif;
 }
 
 html.lang-en {
@@ -227,7 +227,7 @@ a {
 .portal-names {
   display: none;
   color: #eef4f3;
-  font-family: 'Noto Serif KR', 'Noto Serif TC', serif;
+  font-family: 'Gowun Batang', 'Noto Serif TC', serif;
   font-size: clamp(1.1rem, 4vw, 1.45rem);
   letter-spacing: 0.08em;
 }
@@ -962,7 +962,7 @@ body {
 }
 
 html.lang-ko body {
-  font-family: 'Noto Serif KR', 'Nanum Myeongjo', serif;
+  font-family: 'Gowun Batang', serif;
 }
 
 html.lang-tw body {
@@ -1144,12 +1144,16 @@ html.lang-tw body {
 .cover-title {
   max-width: 100%;
   color: var(--rose);
-  font-family: 'Nanum Myeongjo', 'Noto Serif KR', serif;
+  font-family: 'Gowun Batang', serif;
   font-size: clamp(2.2rem, 5vw, 4.2rem);
   font-weight: 400;
   letter-spacing: 0.02em;
   line-height: 1.35;
   overflow-wrap: anywhere;
+}
+
+html.lang-tw .cover-title {
+  font-family: 'Wan Jade Song', serif;
 }
 
 .cover-names {
@@ -1179,8 +1183,14 @@ html.lang-tw .cover-name-set-tw {
   letter-spacing: 0.12em;
 }
 
-html.lang-tw .cover-title {
-  font-family: 'Noto Serif TC', serif;
+html.lang-ko .cover-name-primary,
+html.lang-ko .cover-name-secondary {
+  font-family: 'Gowun Batang', serif;
+}
+
+html.lang-tw .cover-name-primary,
+html.lang-tw .cover-name-secondary {
+  font-family: 'Wan Jade Song', serif;
 }
 
 .cover-date {
