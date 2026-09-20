@@ -9,24 +9,15 @@ ko:
   venue:
     name: "서울 웨딩홀"
     address: "서울시 강남구 예식로 100"
-    description: "편안하고 아름다운 분위기의 예식장에서
-      두 사람의 새로운 출발을 함께 축복해 주세요."
     directions: "지도를 참고해 편안하게 방문해 주세요."
     map_embed_url: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.6044420853327!2d126.97748307611243!3d37.56438222425128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca2f146af4e39%3A0xe28f4800e1b8a3c5!2sThe%20Westin%20Josun%20Seoul!5e0!3m2!1sen!2sus!4v1787111398602!5m2!1sen!2sus"
-    map_image: "/assets/images/venue-map.png"
     map_image_alt: "예식장 위치 지도"
-  contact:
-    venue_phone: "02-0000-0000"
 
   extra:
     initials: "C · Y"
     cover_image:
       src: "/assets/images/cover.svg"
       alt: "커플 사진"
-    calendar_image:
-      src: "/assets/images/cover.svg"
-      alt: "결혼식 일정 이미지"
-    attire: "편안한 정장 또는 단정한 복장을 권장합니다."
     guest_note: # "{guest}님, 저희의 소중한 날에 함께해 주셔서 감사합니다."
     calendar:
       start: "20261205T030000Z"
@@ -82,7 +73,6 @@ ko:
       countdown: "결혼식까지 <span id=\"dday-count\">0</span> 남았습니다."
       venue_name_label: "예식장:"
       venue_address_label: "주소:"
-      venue_phone_label: "전화:"
       rsvp_title: "RSVP"
       rsvp_deadline_label: "회신 기한"
 
@@ -97,24 +87,15 @@ tw:
   venue:
     name: "首爾婚宴會館"
     address: "首爾市江南區婚禮路100號"
-    description: "誠摯邀請您蒞臨婚宴會館，
-      一起見證我們共同生活的美好開始。"
     directions: "請參考地圖，方便前往婚宴會館。"
     map_embed_url: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.6044420853327!2d126.97748307611243!3d37.56438222425128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca2f146af4e39%3A0xe28f4800e1b8a3c5!2sThe%20Westin%20Josun%20Seoul!5e0!3m2!1sen!2sus!4v1787111398602!5m2!1sen!2sus"
-    map_image: "/assets/images/venue-map.png"
     map_image_alt: "婚宴會館位置地圖"
-  contact:
-    venue_phone: "02-0000-0000"
 
   extra:
     initials: "C · Y"
     cover_image:
       src: "/assets/images/cover.svg"
       alt: "新人照片"
-    calendar_image:
-      src: "/assets/images/cover.svg"
-      alt: "婚禮日期圖片"
-    attire: "建議穿著正式或整潔的服裝。"
     guest_note: #"{guest}，謝謝您願意在我們重要的日子與我們分享喜悅。"
     calendar:
       start: "20261205T030000Z"
@@ -170,7 +151,6 @@ tw:
       countdown: "距離婚禮還有 <span id=\"dday-count\">0</span>"
       venue_name_label: "婚宴會館："
       venue_address_label: "地址："
-      venue_phone_label: "電話："
       dress_code_title: "服裝色系"
       rsvp_title: "出席回覆"
       rsvp_deadline_label: "回覆期限"

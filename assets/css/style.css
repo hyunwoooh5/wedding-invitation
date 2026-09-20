@@ -1041,7 +1041,7 @@ html.lang-tw body {
 
 .cover-image-slot {
   width: min(100%, 420px);
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 2 / 3;
   margin: 0 auto 2rem;
   overflow: hidden;
   border: 1px solid rgba(143, 83, 77, 0.25);
