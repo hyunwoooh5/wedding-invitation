@@ -818,6 +818,10 @@ html.lang-en .cover-title {
   background: #fff;
 }
 
+.rsvp-form .btn {
+  border-radius: 999px;
+}
+
 .rsvp-status {
   min-height: 1.5em;
   color: var(--accent);
@@ -1228,8 +1232,12 @@ html.lang-ko .cover-name-secondary {
 }
 
 html.lang-tw .cover-name-primary,
-html.lang-tw .cover-name-secondary {
+html.lang-tw .cover-name-primary {
   font-family: 'Wan Jade Song', serif;
+}
+
+html.lang-tw .cover-name-secondary {
+  font-family: 'Gowun Batang', serif;
 }
 
 .cover-date {
@@ -1317,6 +1325,10 @@ html.lang-tw .cover-name-secondary {
   font-family: 'Cormorant Garamond', 'Noto Serif TC', serif;
   font-size: clamp(1.5rem, 4vw, 2.25rem);
   font-weight: 400;
+}
+
+html.lang-ko .section-head h2 {
+  font-family: 'Gowun Batang', serif;
 }
 
 .section-head::after {
