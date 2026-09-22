@@ -335,6 +335,11 @@ html.lang-en .cover-title {
   gap: 0.75rem;
 }
 
+.cover-actions .calendar-link {
+  padding: 0.75rem 1.25rem;
+  border-radius: 999px;
+}
+
 .btn {
   display: inline-flex;
   align-items: center;
@@ -606,8 +611,9 @@ html.lang-en .cover-title {
   display: block;
   width: var(--gallery-width, 92%);
   padding: 0;
+  overflow: hidden;
   border: 0;
-  border-radius: 0;
+  border-radius: 18px;
   background: transparent;
   cursor: zoom-in;
 }
@@ -855,7 +861,7 @@ html.lang-en .cover-title {
   }
 
   .cover-actions .btn {
-    width: 100%;
+    width: fit-content;
   }
 
   .calendar-actions {
@@ -1045,6 +1051,7 @@ html.lang-tw body {
   margin: 0 auto 2rem;
   overflow: hidden;
   border: 1px solid rgba(143, 83, 77, 0.25);
+  border-radius: 18px;
   background: rgba(255, 255, 255, 0.45);
 }
 
@@ -1059,6 +1066,7 @@ html.lang-tw body {
   width: min(100%, 320px);
   margin: 1.25rem auto 0.75rem;
   border: 1px solid rgba(143, 83, 77, 0.25);
+  border-radius: 18px;
   background: transparent;
   padding: 1.15rem 1.25rem 1.25rem;
 }
@@ -1223,6 +1231,10 @@ html.lang-tw .cover-name-secondary {
   transition: background 200ms ease, transform 200ms ease;
 }
 
+.cover-actions .calendar-link {
+  border-radius: 999px;
+}
+
 .btn:hover,
 .btn:focus-visible {
   background: var(--rose);
@@ -1316,7 +1328,8 @@ html.lang-tw .cover-name-secondary {
 
 .gallery-item {
   border: 0;
-  border-radius: 2px;
+  border-radius: 18px;
+  overflow: hidden;
   background: transparent;
 }
 
