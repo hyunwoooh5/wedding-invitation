@@ -566,6 +566,25 @@ html.lang-en .cover-title {
   gap: 0.65rem;
 }
 
+.venue-details > p {
+  margin: 0;
+  padding: 0.8rem 1.15rem;
+  border: 1px solid rgba(190, 216, 226, 0.16);
+  border-radius: 999px;
+  background: rgba(219, 235, 241, 0.08);
+  line-height: 1.65;
+}
+
+.venue-details > p strong {
+  color: var(--rose);
+  font-weight: 400;
+}
+
+.venue-details .venue-directions {
+  border-radius: 2rem;
+  background: rgba(114, 169, 194, 0.14);
+}
+
 .directions-grid {
   display: grid;
   gap: 1rem;
@@ -769,6 +788,10 @@ html.lang-en .cover-title {
   font-weight: 700;
 }
 
+.rsvp-gift-note br {
+  display: none;
+}
+
 .rsvp-form label,
 .rsvp-form fieldset {
   display: grid;
@@ -920,6 +943,14 @@ html.lang-en .cover-title {
   .contact-card,
   .note {
     overflow-wrap: anywhere;
+  }
+
+  .rsvp-gift-note {
+    white-space: nowrap;
+  }
+
+  .rsvp-gift-note br {
+    display: block;
   }
 }
 
