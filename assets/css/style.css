@@ -1257,7 +1257,10 @@ html.lang-ko .cover-name-secondary {
   font-family: 'Gowun Batang', serif;
 }
 
-html.lang-tw .cover-name-primary,
+html.lang-ko .cover-name-secondary {
+  font-family: 'Wan Jade Song', serif;
+}
+
 html.lang-tw .cover-name-primary {
   font-family: 'Wan Jade Song', serif;
 }

@@ -55,7 +55,6 @@ ko:
 
   page:
     nav:
-      cover: "초대"
       venue: "예식장"
       gallery: "갤러리"
     buttons:
@@ -136,7 +135,6 @@ tw:
 
   page:
     nav:
-      cover: "邀請"
       venue: "婚宴會館"
       gallery: "相簿"
     buttons:
