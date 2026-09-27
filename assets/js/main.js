@@ -14,7 +14,6 @@ document.addEventListener('DOMContentLoaded', function () {
   const guestName = queryParams.get('to')?.trim().slice(0, 80) || '';
   const requestedLanguage = queryParams.get('language')?.trim().toLowerCase();
   const letterIntro = document.getElementById('letter-intro');
-  const rsvpForm = document.getElementById('rsvp-form');
 
   function getWeddingDate(lang) {
     const start = weddingData[lang]?.extra?.calendar?.start || weddingData[defaultLang]?.extra?.calendar?.start;
@@ -121,6 +120,11 @@ document.addEventListener('DOMContentLoaded', function () {
       element.hidden = typeof value !== 'string' || !value.trim();
     });
 
+    document.querySelectorAll('[data-optional-note-heading]').forEach((element) => {
+      const value = getValueByPath(weddingData[lang], element.dataset.key);
+      element.hidden = typeof value !== 'string' || !value.trim();
+    });
+
     if (langToggle) {
       langToggle.textContent = lang === 'ko' ? 'TW' : 'KR';
     }
@@ -134,12 +138,6 @@ document.addEventListener('DOMContentLoaded', function () {
         : (lang === 'ko' ? fallback : '親愛的朋友，');
     }
     */
-
-    document.querySelectorAll('[data-guest-name]').forEach((element) => {
-      if (guestName && !element.value) {
-        element.value = guestName;
-      }
-    });
 
     const letterMessage = document.querySelector('.letter-message');
     const guestLabel = guestName || (lang === 'ko' ? '소중한 분' : '親愛的朋友');
@@ -324,30 +322,6 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   initReveals();
-
-  rsvpForm?.addEventListener('submit', async (event) => {
-    event.preventDefault();
-    const status = document.getElementById('rsvp-status');
-    const endpoint = rsvpForm.dataset.endpoint?.trim();
-    if (!endpoint) {
-      status.textContent = 'RSVP endpoint is not configured yet.';
-      return;
-    }
-    const submitButton = rsvpForm.querySelector('button[type="submit"]');
-    submitButton.disabled = true;
-    try {
-      const response = await fetch(endpoint, { method: 'POST', body: new FormData(rsvpForm) });
-      if (!response.ok) {
-        throw new Error('RSVP request failed');
-      }
-      status.textContent = weddingData[localStorage.getItem('preferredLang') || defaultLang].rsvp.success;
-      rsvpForm.reset();
-    } catch (error) {
-      status.textContent = 'Unable to send RSVP. Please contact the couple directly.';
-    } finally {
-      submitButton.disabled = false;
-    }
-  });
 
   document.querySelectorAll('.gallery-item').forEach((item, index) => {
     item.addEventListener('click', () => openGallery(index));

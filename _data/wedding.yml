@@ -12,7 +12,7 @@ ko:
     directions_label: "오시는 길 (지하철):"
     directions: "지도를 참고해 편안하게 방문해 주세요."
     directions_2_label: "오시는 길 (택시):"
-    directions_2: ""
+    directions_2: "지도를 참고해 편안하게 방문해 주세요."
     map_embed_url: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.6044420853327!2d126.97748307611243!3d37.56438222425128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca2f146af4e39%3A0xe28f4800e1b8a3c5!2sThe%20Westin%20Josun%20Seoul!5e0!3m2!1sen!2sus!4v1787111398602!5m2!1sen!2sus"
     map_image_alt: "예식장 위치 지도"
 
@@ -26,21 +26,18 @@ ko:
       start: "20261205T030000Z"
       end: "20261205T060000Z"
       details: "함께 걷는 새로운 시작"
-    rsvp_endpoint: ""
 
-  rsvp:
-    deadline: "2026년 11월 21일"
-    gift_note: |-
-      여러분의 축하와 마음만으로도 충분합니다.
-      금전적인 선물은 정중히 사양합니다.
-    name_label: "성함"
-    attendance_label: "참석 여부"
-    attending: "참석합니다"
-    unavailable: "참석이 어렵습니다"
-    message_label: "신랑 신부에게 전할 말"
-    submit: "회신 보내기"
-    success: "소중한 회신이 전달되었습니다. 감사합니다."
-    endpoint_note: "회신 기능을 연결하려면 Google Apps Script 또는 Formspree 주소를 설정해 주세요."
+  notes:
+    - heading: ""
+      text: |-
+        여러분의 축하와 마음만으로도 충분합니다. 금전적인 선물은 정중히 사양합니다.
+    - heading: ""
+      text: |-
+        abc
+    - heading: ""
+      text: |-
+        edf
+        
 
   gallery:
     - src: "/assets/images/cover.svg"
@@ -78,8 +75,7 @@ ko:
       venue_name_label: "예식장:"
       venue_address_label: "주소:"
       venue_directions_label: "오시는 길:"
-      rsvp_title: "RSVP"
-      rsvp_deadline_label: "회신 기한"
+      notes_title: "안내사항"
 
 tw:
   description: "誠摯邀請您參加我們婚禮的電子喜帖。"
@@ -95,7 +91,7 @@ tw:
     directions_label: "前往方式（地鐵）："
     directions: "請參考地圖，方便前往婚宴會館。"
     directions_2_label: "前往方式（出租車）："
-    directions_2: ""
+    directions_2: "請參考地圖，方便前往婚宴會館。"
     map_embed_url: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.6044420853327!2d126.97748307611243!3d37.56438222425128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca2f146af4e39%3A0xe28f4800e1b8a3c5!2sThe%20Westin%20Josun%20Seoul!5e0!3m2!1sen!2sus!4v1787111398602!5m2!1sen!2sus"
     map_image_alt: "婚宴會館位置地圖"
 
@@ -109,21 +105,17 @@ tw:
       start: "20261205T030000Z"
       end: "20261205T060000Z"
       details: "一起走向新的開始"
-    rsvp_endpoint: ""
 
-  rsvp:
-    deadline: "2026年11月21日"
-    gift_note: |-
-      您的祝福與心意就是最珍貴的禮物，
-      恕不收受現金禮金。
-    name_label: "姓名"
-    attendance_label: "是否出席"
-    attending: "我會出席"
-    unavailable: "無法出席"
-    message_label: "給新人的祝福"
-    submit: "送出回覆"
-    success: "已收到您的回覆，謝謝您。"
-    endpoint_note: "請設定 Google Apps Script 或 Formspree 網址以啟用回覆功能。"
+  notes:
+    - heading: ""
+      text: |-
+        僅有各位的祝福與心意，就已足夠。恕不收受金錢禮物。
+    - heading: ""
+      text: |- 
+        abc
+    - heading: ""
+      text: |-
+        edf
 
   gallery:
     - src: "/assets/images/cover.svg"
@@ -162,5 +154,4 @@ tw:
       venue_address_label: "地址："
       venue_directions_label: "前往方式："
       dress_code_title: "服裝色系"
-      rsvp_title: "出席回覆"
-      rsvp_deadline_label: "回覆期限"
+      notes_title: "注意事項"

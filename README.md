@@ -81,9 +81,9 @@ necessary to restructure the site just to change fonts.
 - `index.html` renders the initial Korean content and attaches translation keys
 	with `data-key` attributes.
 - `assets/css/style.css` controls the visual design.
-- The letter intro optionally personalizes its greeting and RSVP name field
-	from a URL such as `?to=Name`. This is client-side and not private; anyone can
-	change the name in the URL.
+- The letter intro optionally personalizes its greeting from a URL such as
+	`?to=Name`. This is client-side and not private; anyone can change the name
+	in the URL.
 - The starting language can be selected with `?language=ko` or `?language=tw`.
 	The value is case-insensitive, so `?language=TW` works too. Both parameters
 	can be combined, for example `?to=Name&language=tw`.
@@ -102,28 +102,10 @@ necessary to restructure the site just to change fonts.
 - The Google Calendar button opens a pre-filled event. The Apple Calendar button
 	downloads an `.ics` calendar file that can be opened by Apple Calendar.
 - The current visual theme uses a light-blue palette. The visible invitation
-	sections are the envelope intro, cover, gallery, venue map, and RSVP form.
-
-## RSVP Endpoint
-
-GitHub Pages cannot receive form submissions itself. Set `extra.rsvp_endpoint`
-in both language sections of `_data/wedding.yml` to a public HTTPS endpoint.
-
-### Google Apps Script
-
-1. Create a Google Sheet for responses and open **Extensions > Apps Script**.
-2. Add a `doPost` function that reads `name`, `attendance`, and `message` from
-	 `e.parameter`, then appends them to the sheet.
-3. Deploy it as a web app with **Execute as: Me** and **Who has access: Anyone**.
-4. Copy the `/exec` URL into `ko.extra.rsvp_endpoint` and `tw.extra.rsvp_endpoint`.
-5. Rebuild and deploy the Jekyll site.
-
-The browser sends the RSVP as a `POST` request using `FormData`. Do not put
-private API keys or credentials in the repository; the endpoint URL is visible
-to anyone who can view the page.
-
-Formspree can be used instead by creating a form and placing its HTTPS endpoint
-in the same `rsvp_endpoint` fields.
+	sections are the envelope intro, cover, gallery, venue map, and notes.
+- Add informational entries to `ko.notes` and `tw.notes` in
+	`_data/wedding.yml`. Each entry has a `text` value and an optional `heading`;
+	keep both language lists in the same order so the language switch stays aligned.
 
 ## Troubleshooting
 
