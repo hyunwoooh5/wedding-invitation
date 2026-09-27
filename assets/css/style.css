@@ -665,27 +665,27 @@ html.lang-en .cover-title {
 }
 
 .gallery-item:nth-child(1) {
-  --gallery-width: 100%;
+  --gallery-width: 95%;
 }
 
 .gallery-item:nth-child(2) {
-  --gallery-width: 84%;
+  --gallery-width: 79%;
 }
 
 .gallery-item:nth-child(3) {
-  --gallery-width: 94%;
+  --gallery-width: 89%;
 }
 
 .gallery-item:nth-child(4) {
-  --gallery-width: 78%;
+  --gallery-width: 73%;
 }
 
 .gallery-item:nth-child(5) {
-  --gallery-width: 90%;
+  --gallery-width: 85%;
 }
 
 .gallery-item:nth-child(6) {
-  --gallery-width: 82%;
+  --gallery-width: 77%;
 }
 
 .gallery-item:hover img,
@@ -1107,7 +1107,7 @@ html.lang-tw body {
 }
 
 .cover-image-slot {
-  width: min(100%, 420px);
+  width: min(100%, 380px);
   aspect-ratio: 2 / 3;
   margin: 0 auto 2rem;
   overflow: hidden;
@@ -1388,6 +1388,16 @@ html.lang-tw .cover-name-secondary {
   font-weight: 400;
 }
 
+.venue-section-head h2 {
+  white-space: pre-line;
+}
+
+.venue-section-head .venue-address {
+  max-width: none;
+  margin: 0.75rem 0 0;
+  text-align: left;
+}
+
 html.lang-ko .section-head h2 {
   font-family: 'Gowun Batang', serif;
 }
@@ -1623,7 +1633,7 @@ html.lang-ko .section-head h2 {
   }
 
   .cover-image-slot {
-    width: min(100%, 320px);
+    width: min(100%, 288px);
     margin-bottom: 1.5rem;
   }
 
