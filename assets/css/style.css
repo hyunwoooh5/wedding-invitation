@@ -494,52 +494,6 @@ html.lang-en .cover-title {
   line-height: 1.75;
 }
 
-.dress-code-block {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.7), rgba(214, 235, 249, 0.78));
-  border: 1px solid var(--border);
-}
-
-.dress-code-inline {
-  margin-top: 1.5rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid var(--border);
-  text-align: center;
-}
-
-.dress-code-inline h3 {
-  margin: 0;
-  font-size: 1.2rem;
-  font-weight: 400;
-}
-
-.dress-code-inline p {
-  margin: 0.5rem auto 0;
-  color: var(--muted);
-}
-
-.palette-grid {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1rem 1.5rem;
-}
-
-.palette-item {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.6rem;
-  font-weight: 700;
-}
-
-.palette-swatch {
-  width: 2rem;
-  height: 2rem;
-  border-radius: 50%;
-  background: var(--swatch);
-  border: 2px solid rgba(255, 255, 255, 0.8);
-  box-shadow: 0 2px 8px rgba(44, 42, 38, 0.16);
-}
-
 .venue-card {
   display: grid;
   gap: 1.5rem;
@@ -1493,8 +1447,7 @@ html.lang-ko .section-head h2 {
   transform: rotate(-3deg) translateY(1rem);
 }
 
-.highlight-block,
-.dress-code-block {
+.highlight-block {
   background: transparent;
 }
 
