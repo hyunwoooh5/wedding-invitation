@@ -77,7 +77,7 @@
 
 <section id="venue" class="section-block reveal">
   <div class="section-head venue-section-head"><h2 data-key="venue.name">{{ wedding.venue.name }}</h2><p class="venue-address"><span data-key="venue.address">{{ wedding.venue.address }}</span></p></div>
-  <div class="venue-card"><div class="venue-map"><iframe src="{{ wedding.venue.map_embed_url }}" title="{{ wedding.venue.map_image_alt }}" loading="lazy" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div><div class="venue-details"><p class="venue-directions"><strong data-key="page.sections.venue_directions_label">{{ wedding.page.sections.venue_directions_label }}</strong> <span data-key="venue.directions" data-preserve-html="true">{{ wedding.venue.directions | newline_to_br }}</span></p></div></div>
+    <div class="venue-card"><div class="venue-map"><iframe src="{{ wedding.venue.map_embed_url }}" title="{{ wedding.venue.map_image_alt }}" loading="lazy" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div><div class="venue-details"><p class="venue-directions"><strong data-key="venue.directions_label">{{ wedding.venue.directions_label }}</strong> <span data-key="venue.directions" data-preserve-html="true">{{ wedding.venue.directions | newline_to_br }}</span></p>{% if wedding.venue.directions_2 != empty %}<p class="venue-directions" data-optional-direction data-direction-key="venue.directions_2"><strong data-key="venue.directions_2_label">{{ wedding.venue.directions_2_label }}</strong> <span data-key="venue.directions_2" data-preserve-html="true">{{ wedding.venue.directions_2 | newline_to_br }}</span></p>{% endif %}</div></div>
 </section>
 
 <section id="rsvp" class="section-block rsvp-block">

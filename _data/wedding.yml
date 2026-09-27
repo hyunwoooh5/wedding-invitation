@@ -9,7 +9,10 @@ ko:
   venue:
     name: "서울 웨딩홀"
     address: "서울시 강남구 예식로 100"
+    directions_label: "오시는 길 (지하철):"
     directions: "지도를 참고해 편안하게 방문해 주세요."
+    directions_2_label: "오시는 길 (택시):"
+    directions_2: ""
     map_embed_url: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.6044420853327!2d126.97748307611243!3d37.56438222425128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca2f146af4e39%3A0xe28f4800e1b8a3c5!2sThe%20Westin%20Josun%20Seoul!5e0!3m2!1sen!2sus!4v1787111398602!5m2!1sen!2sus"
     map_image_alt: "예식장 위치 지도"
 
@@ -89,7 +92,10 @@ tw:
   venue:
     name: "首爾婚宴會館"
     address: "首爾市江南區婚禮路100號"
+    directions_label: "前往方式（地鐵）："
     directions: "請參考地圖，方便前往婚宴會館。"
+    directions_2_label: "前往方式（出租車）："
+    directions_2: ""
     map_embed_url: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.6044420853327!2d126.97748307611243!3d37.56438222425128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca2f146af4e39%3A0xe28f4800e1b8a3c5!2sThe%20Westin%20Josun%20Seoul!5e0!3m2!1sen!2sus!4v1787111398602!5m2!1sen!2sus"
     map_image_alt: "婚宴會館位置地圖"
 

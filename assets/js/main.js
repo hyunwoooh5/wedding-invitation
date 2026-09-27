@@ -116,6 +116,11 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
 
+    document.querySelectorAll('[data-optional-direction]').forEach((element) => {
+      const value = getValueByPath(weddingData[lang], element.dataset.directionKey);
+      element.hidden = typeof value !== 'string' || !value.trim();
+    });
+
     if (langToggle) {
       langToggle.textContent = lang === 'ko' ? 'TW' : 'KR';
     }
