@@ -33,10 +33,10 @@ ko:
         여러분의 축하와 마음만으로도 충분합니다. 금전적인 선물은 정중히 사양합니다.
     - heading: ""
       text: |-
-        abc
+        Google: [Link](https://google.com)
     - heading: ""
       text: |-
-        edf
+        abc
         
 
   gallery:
@@ -112,10 +112,10 @@ tw:
         僅有各位的祝福與心意，就已足夠。恕不收受金錢禮物。
     - heading: ""
       text: |- 
-        abc
+        Google: [Link](https://google.com)
     - heading: ""
       text: |-
-        edf
+        abc
 
   gallery:
     - src: "/assets/images/cover.svg"

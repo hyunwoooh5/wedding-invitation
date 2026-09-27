@@ -72,12 +72,55 @@ document.addEventListener('DOMContentLoaded', function () {
     }, object);
   }
 
+  function appendNoteText(element, text) {
+    text.split('\n').forEach((line, index) => {
+      if (index > 0) {
+        element.append(document.createElement('br'));
+      }
+      element.append(document.createTextNode(line));
+    });
+  }
+
+  function renderNoteText(element, value) {
+    const linkPattern = /\[([^\]]+)\]\(([^)\s]+)\)/g;
+    let lastIndex = 0;
+    let match;
+
+    element.replaceChildren();
+    while ((match = linkPattern.exec(value)) !== null) {
+      appendNoteText(element, value.slice(lastIndex, match.index));
+
+      let href;
+      try {
+        href = new URL(match[2], window.location.href);
+      } catch {
+        href = null;
+      }
+
+      if (href && ['http:', 'https:', 'mailto:'].includes(href.protocol)) {
+        const link = document.createElement('a');
+        link.href = href.href;
+        link.textContent = match[1];
+        element.append(link);
+      } else {
+        appendNoteText(element, match[0]);
+      }
+
+      lastIndex = linkPattern.lastIndex;
+    }
+    appendNoteText(element, value.slice(lastIndex));
+  }
+
   function setTextContent(element, value) {
     if (typeof value !== 'string') {
       return;
     }
     if (element.tagName === 'IMG') {
       element.alt = value;
+      return;
+    }
+    if (element.dataset.key?.startsWith('notes[') && element.dataset.key.endsWith('.text')) {
+      renderNoteText(element, value);
       return;
     }
     if (element.dataset.preserveHtml === 'true') {
