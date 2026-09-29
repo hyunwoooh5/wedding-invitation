@@ -9,6 +9,8 @@ document.addEventListener('DOMContentLoaded', function () {
   const galleryImages = Array.from(document.querySelectorAll('.gallery-item img'));
   let selectedGalleryIndex = 0;
   const weddingData = window.weddingData || {};
+  const notesList = document.querySelector('.notes-list');
+  const noteTemplate = notesList?.querySelector('.notes-item')?.cloneNode(true);
   const weddingCalendar = document.getElementById('wedding-calendar');
   const queryParams = new URLSearchParams(window.location.search);
   const guestName = queryParams.get('to')?.trim().slice(0, 80) || '';
@@ -148,6 +150,17 @@ document.addEventListener('DOMContentLoaded', function () {
     document.documentElement.className = languageClassByLanguage[lang];
     localStorage.setItem('preferredLang', lang);
     updatePageDescription(lang);
+
+    const notes = weddingData[lang]?.notes;
+    if (notesList && Array.isArray(notes) && noteTemplate) {
+      notesList.replaceChildren(...notes.map((note, index) => {
+        const item = noteTemplate.cloneNode(true);
+        item.querySelectorAll('[data-key]').forEach((element) => {
+          element.dataset.key = element.dataset.key.replace(/notes\[\d+\]/, `notes[${index}]`);
+        });
+        return item;
+      }));
+    }
 
     document.querySelectorAll('[data-key]').forEach((element) => {
       const value = getValueByPath(weddingData[lang], element.dataset.key);
