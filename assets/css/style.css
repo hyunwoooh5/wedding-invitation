@@ -1186,6 +1186,11 @@ html.lang-ko .cover-name-secondary {
   font-family: 'Wan Jade Song', serif;
 }
 
+html.lang-ko .cover-name-character-adjust {
+  position: relative;
+  top: -0.08em;
+}
+
 html.lang-tw .cover-name-primary {
   font-family: 'Wan Jade Song', serif;
 }

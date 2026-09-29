@@ -1,30 +1,33 @@
 ko:
   description: "함께 축복해 주실 소중한 분들을 위한 웨딩 초대장 페이지입니다."
   couple:
-    groom: "신랑 이름"
-    bride: "신부 이름"
+    groom: "오현우"
+    bride: "리이팅"
     date: "2026년 12월 5일 토요일 오후 12시"
-    subtitle: "함께 걷는 새로운 시작"
+    subtitle: "서로에게 가장 다정한 편이 되어"
 
   venue:
-    name: "서울 웨딩홀"
-    address: "서울시 강남구 예식로 100"
+    name: "Hotel Nikko Kaohsiung"
+    address: "No. 268號, Linsen 4th Rd, Zhenxing Village, Cianjhen District, Kaohsiung City, Taiwan"
     directions_label: "오시는 길 (지하철):"
-    directions: "지도를 참고해 편안하게 방문해 주세요."
-    directions_2_label: "오시는 길 (택시):"
-    directions_2: "지도를 참고해 편안하게 방문해 주세요."
-    map_embed_url: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.6044420853327!2d126.97748307611243!3d37.56438222425128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca2f146af4e39%3A0xe28f4800e1b8a3c5!2sThe%20Westin%20Josun%20Seoul!5e0!3m2!1sen!2sus!4v1787111398602!5m2!1sen!2sus"
+    directions: |-
+       Kaohsiung International Airport Station (5정거장)
+       → Sanduo Shopping District Station
+       → 2번 출구 (도보 9분)
+    directions_2_label: "오시는 길 (택시/우버):"
+    directions_2: "'高雄日航酒店'로 검색해주세요. (~20분)"
+    map_embed_url: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3683.1765804018905!2d120.3027909!3d22.6098803!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e030004dc9165%3A0xf1c8ab02b634069b!2shotel%20nikko%20kaohsiung!5e0!3m2!1sen!2sus!4v1789709724298!5m2!1sen!2sus"
     map_image_alt: "예식장 위치 지도"
 
   extra:
-    initials: "C · Y"
+    initials: "H · Y"
     cover_image:
-      src: "/assets/images/cover.svg"
+      src: "/assets/images/GH1_1691.jpg"
       alt: "커플 사진"
     guest_note: # "{guest}님, 저희의 소중한 날에 함께해 주셔서 감사합니다."
     calendar:
-      start: "20261205T030000Z"
-      end: "20261205T060000Z"
+      start: "20261205T040000Z"
+      end: "20261205T070000Z"
       details: "함께 걷는 새로운 시작"
 
   notes:
@@ -33,25 +36,23 @@ ko:
         여러분의 축하와 마음만으로도 충분합니다. 금전적인 선물은 정중히 사양합니다.
     - heading: ""
       text: |-
-        Google: [Link](https://google.com)
+        저희의 예식은 비즈니스 캐주얼 차림으로 편안하게 참석해 주시면 감사하겠습니다.
     - heading: ""
       text: |-
-        abc
+        가오슝 여행은 다음 링크를 참조해주세요: [Google Maps](https://maps.app.goo.gl/uD21wuZ84t8CjgEn8)
         
 
   gallery:
-    - src: "/assets/images/cover.svg"
+    - src: "/assets/images/IMG_0662.jpeg"
       alt: "커버 이미지"
-    - src: "/assets/images/gallery-1.svg"
+    - src: "/assets/images/GH1_3803.jpg"
       alt: "웨딩 사진 1"
-    - src: "/assets/images/gallery-2.svg"
+    - src: "/assets/images/GH1_0234.jpg"
       alt: "웨딩 사진 2"
-    - src: "/assets/images/cover.svg"
+    - src: "/assets/images/DSC09727.jpg"
       alt: "커버 이미지"
-    - src: "/assets/images/gallery-1.svg"
+    - src: "/assets/images/DSC09357.jpg"
       alt: "웨딩 사진 1"
-    - src: "/assets/images/gallery-2.svg"
-      alt: "웨딩 사진 2"
 
   page:
     nav:
@@ -70,8 +71,8 @@ ko:
       skip: "건너뛰기"
     sections:
       venue_title: "예식장 안내"
-      gallery_title: "갤러리"
-      gallery_subtitle: "우리의 순간을 미리 느껴보세요."
+      gallery_title: "📸"
+      gallery_subtitle: ""
       countdown: "결혼식까지 <span id=\"dday-count\">0</span> 남았습니다."
       venue_name_label: "예식장:"
       venue_address_label: "주소:"
@@ -81,30 +82,32 @@ ko:
 tw:
   description: "誠摯邀請您參加我們婚禮的電子喜帖。"
   couple:
-    groom: "新郎姓名"
-    bride: "新娘姓名"
+    groom: "吳炫又"
+    bride: "李奕葶"
     date: "2026年12月5日（星期六）中午12點"
-    subtitle: "一起走向新的開始"
+    subtitle: "成為彼此最溫柔的依靠"
 
   venue:
-    name: "首爾婚宴會館"
-    address: "首爾市江南區婚禮路100號"
+    name: |-
+      高雄日航酒店
+      Hotel Nikko Kaohsiung
+    address: "高雄市前鎮區振興里林森四路268號"
     directions_label: "前往方式（地鐵）："
-    directions: "請參考地圖，方便前往婚宴會館。"
+    directions: "三多商圈站 2號出口（步行9分鐘）"
     directions_2_label: "前往方式（出租車）："
     directions_2: "請參考地圖，方便前往婚宴會館。"
-    map_embed_url: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.6044420853327!2d126.97748307611243!3d37.56438222425128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca2f146af4e39%3A0xe28f4800e1b8a3c5!2sThe%20Westin%20Josun%20Seoul!5e0!3m2!1sen!2sus!4v1787111398602!5m2!1sen!2sus"
+    map_embed_url: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3683.1765804018905!2d120.3027909!3d22.6098803!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e030004dc9165%3A0xf1c8ab02b634069b!2shotel%20nikko%20kaohsiung!5e0!3m2!1sen!2sus!4v1789709724298!5m2!1sen!2sus"
     map_image_alt: "婚宴會館位置地圖"
 
   extra:
-    initials: "C · Y"
+    initials: "H · Y"
     cover_image:
-      src: "/assets/images/cover.svg"
+      src: "/assets/images/GH1_1691.jpg"
       alt: "新人照片"
     guest_note: #"{guest}，謝謝您願意在我們重要的日子與我們分享喜悅。"
     calendar:
-      start: "20261205T030000Z"
-      end: "20261205T060000Z"
+      start: "20261205T040000Z"
+      end: "20261205T070000Z"
       details: "一起走向新的開始"
 
   notes:
@@ -113,24 +116,19 @@ tw:
         僅有各位的祝福與心意，就已足夠。恕不收受金錢禮物。
     - heading: ""
       text: |- 
-        Google: [Link](https://google.com)
-    - heading: ""
-      text: |-
-        abc
+        我們的婚禮服飾為商務休閒風，請輕鬆舒適地出席即可，謝謝。
 
   gallery:
-    - src: "/assets/images/cover.svg"
+    - src: "/assets/images/IMG_0662.jpeg"
       alt: "封面圖片"
-    - src: "/assets/images/gallery-1.svg"
+    - src: "/assets/images/GH1_3803.jpg"
       alt: "婚禮照片1"
-    - src: "/assets/images/gallery-2.svg"
+    - src: "/assets/images/GH1_0234.jpg"
       alt: "婚禮照片2"
-    - src: "/assets/images/cover.svg"
+    - src: "/assets/images/DSC09727.jpg"
       alt: "封面圖片"
-    - src: "/assets/images/gallery-1.svg"
+    - src: "/assets/images/DSC09357.jpg"
       alt: "婚禮照片1"
-    - src: "/assets/images/gallery-2.svg"
-      alt: "婚禮照片2"
 
   page:
     nav:
@@ -149,8 +147,8 @@ tw:
       skip: "略過"
     sections:
       venue_title: "婚宴會館資訊"
-      gallery_title: "相簿"
-      gallery_subtitle: "先睹為快，感受我們的幸福時刻"
+      gallery_title: "📸"
+      gallery_subtitle: ""
       countdown: "距離婚禮還有 <span id=\"dday-count\">0</span>"
       venue_name_label: "婚宴會館："
       venue_address_label: "地址："

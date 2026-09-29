@@ -12,7 +12,7 @@
     <div class="cover-names">
       <div class="cover-name-set cover-name-set-ko">
         <span class="cover-name-primary">{{ site.data.wedding.ko.couple.groom }} ♡ {{ site.data.wedding.ko.couple.bride }}</span>
-        <span class="cover-name-secondary">{{ site.data.wedding.tw.couple.groom }} ♡ {{ site.data.wedding.tw.couple.bride }}</span>
+        <span class="cover-name-secondary">{{ site.data.wedding.tw.couple.groom }} ♡ {{ site.data.wedding.tw.couple.bride | replace: "葶", '<span class="cover-name-character-adjust">葶</span>' }}</span>
       </div>
       <div class="cover-name-set cover-name-set-tw">
         <span class="cover-name-primary">{{ site.data.wedding.tw.couple.groom }} ♡ {{ site.data.wedding.tw.couple.bride }}</span>
