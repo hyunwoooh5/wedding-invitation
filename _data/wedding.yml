@@ -57,6 +57,7 @@ ko:
     nav:
       venue: "예식장"
       gallery: "갤러리"
+      notes: "안내사항"
     buttons:
       add_calendar: "Google 캘린더에 추가"
       add_apple_calendar: "Apple 캘린더에 추가"
@@ -135,6 +136,7 @@ tw:
     nav:
       venue: "婚宴會館"
       gallery: "相簿"
+      notes: "注意事項"
     buttons:
       add_calendar: "加入 Google 日曆"
       add_apple_calendar: "加入 Apple 日曆"
