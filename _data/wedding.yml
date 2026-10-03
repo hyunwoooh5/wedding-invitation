@@ -92,10 +92,14 @@ tw:
       高雄日航酒店
       Hotel Nikko Kaohsiung
     address: "高雄市前鎮區振興里林森四路268號"
-    directions_label: "前往方式（地鐵）："
-    directions: "三多商圈站 2號出口（步行9分鐘）"
-    directions_2_label: "前往方式（出租車）："
-    directions_2: "請參考地圖，方便前往婚宴會館。"
+    directions_label: "大眾運輸:"
+    directions: "捷運紅線 三多商圈站 2號出口➡️步行9分鐘"
+    directions_2_label: "停車資訊:"
+    directions_2: |-
+      (均可折抵4小時)
+      1. 日航B2底下停車場 
+      2. 林森文林停車場: 步行 1 分鐘
+      3. 中華新光停車場: 步行 5 分鐘
     map_embed_url: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3683.1765804018905!2d120.3027909!3d22.6098803!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e030004dc9165%3A0xf1c8ab02b634069b!2shotel%20nikko%20kaohsiung!5e0!3m2!1sen!2sus!4v1789709724298!5m2!1sen!2sus"
     map_image_alt: "婚宴會館位置地圖"
 
