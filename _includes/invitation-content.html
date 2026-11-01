@@ -55,13 +55,8 @@
   <div class="portal-content">
     <div class="portal-orbit" aria-hidden="true"><span></span><span></span><span></span></div>
     <p class="portal-kicker" data-key="page.letter.prompt">{{ wedding.page.letter.prompt }}</p>
-    <div class="portal-monogram" data-key="extra.initials">{{ wedding.extra.initials }}</div>
-    <div class="portal-names portal-names-ko">
-      <span>{{ site.data.wedding.ko.couple.groom }} ♡ {{ site.data.wedding.ko.couple.bride }}</span>
-    </div>
-    <div class="portal-names portal-names-tw">
-      <span>{{ site.data.wedding.tw.couple.groom }} ♡ {{ site.data.wedding.tw.couple.bride }}</span>
-    </div>
+    <div class="portal-monogram portal-monogram-ko">{{ site.data.wedding.ko.couple.groom }} ♡ {{ site.data.wedding.ko.couple.bride }}</div>
+    <div class="portal-monogram portal-monogram-tw">{{ site.data.wedding.tw.couple.groom }} ♡ {{ site.data.wedding.tw.couple.bride }}</div>
     <p class="portal-date" data-key="couple.date">{{ wedding.couple.date }}</p>
     <p class="letter-message" data-key="extra.guest_note">{{ wedding.extra.guest_note }}</p>
     <button id="letter-open" class="portal-open" type="button" data-key="page.letter.open">{{ wedding.page.letter.open }}</button>

@@ -30,7 +30,7 @@ html.lang-ko {
 }
 
 html.lang-tw {
-  font-family: 'Wan Jade Song', serif;
+  font-family: 'LXGW WenKai TC', serif;
 }
 
 html.lang-en {
@@ -219,24 +219,18 @@ a {
 }
 
 .portal-monogram {
+  display: none;
   color: var(--accent-strong);
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(2.7rem, 12vw, 4.5rem);
+  font-size: clamp(1.8rem, 8vw, 3rem);
   line-height: 0.9;
   letter-spacing: 0.08em;
+  white-space: nowrap;
   text-shadow: 0 0 1.5rem rgba(123, 183, 216, 0.25);
 }
 
-.portal-names {
-  display: none;
-  color: var(--text);
-  font-family: 'Gowun Batang', 'Noto Serif TC', serif;
-  font-size: clamp(1.1rem, 4vw, 1.45rem);
-  letter-spacing: 0.08em;
-}
-
-html.lang-ko .portal-names-ko,
-html.lang-tw .portal-names-tw { display: block; }
+html.lang-ko .portal-monogram-ko,
+html.lang-tw .portal-monogram-tw { display: block; }
 
 .portal-date {
   margin: 0;
@@ -956,7 +950,7 @@ html.lang-ko body {
 }
 
 html.lang-tw body {
-  font-family: 'Noto Serif TC', serif;
+  font-family: 'LXGW WenKai TC', serif;
 }
 
 .page-shell {
@@ -1147,7 +1141,7 @@ html.lang-tw body {
 }
 
 html.lang-tw .cover-title {
-  font-family: 'Wan Jade Song', serif;
+  font-family: 'LXGW WenKai TC', serif;
 }
 
 .cover-names {
@@ -1183,7 +1177,7 @@ html.lang-ko .cover-name-secondary {
 }
 
 html.lang-ko .cover-name-secondary {
-  font-family: 'Wan Jade Song', serif;
+  font-family: 'LXGW WenKai TC', serif;
 }
 
 html.lang-ko .cover-name-character-adjust {
@@ -1192,7 +1186,7 @@ html.lang-ko .cover-name-character-adjust {
 }
 
 html.lang-tw .cover-name-primary {
-  font-family: 'Wan Jade Song', serif;
+  font-family: 'LXGW WenKai TC', serif;
 }
 
 html.lang-tw .cover-name-secondary {
@@ -1206,6 +1200,13 @@ html.lang-tw .cover-name-secondary {
   font-size: clamp(1.35rem, 3vw, 1.85rem);
   font-weight: 400;
   letter-spacing: 0.08em;
+}
+
+html.lang-tw .portal-monogram-tw,
+html.lang-tw .portal-date,
+html.lang-tw .cover-date,
+html.lang-tw .section-head h2 {
+  font-family: 'LXGW WenKai TC', serif;
 }
 
 .cover-name {
