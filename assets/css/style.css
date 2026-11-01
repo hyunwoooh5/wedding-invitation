@@ -524,9 +524,10 @@ html.lang-en .cover-title {
   margin: 0;
   padding: 0.8rem 1.15rem;
   border: 1px solid rgba(103, 149, 190, 0.2);
-  border-radius: 999px;
+  border-radius: 1.5rem;
   background: rgba(209, 233, 247, 0.62);
   line-height: 1.65;
+  overflow-wrap: anywhere;
   transition: border-color 180ms ease, background 180ms ease, transform 180ms ease;
 }
 
@@ -538,7 +539,7 @@ html.lang-en .cover-title {
 }
 
 .venue-details > p:nth-child(3) {
-  border-radius: 2rem;
+  border-radius: 1.5rem;
 }
 
 .venue-details > p strong {
@@ -1326,7 +1327,7 @@ html.lang-tw .section-head h2 {
 .venue-section-head .venue-address {
   max-width: none;
   margin: 0.75rem 0 0;
-  text-align: left;
+  text-align: center;
 }
 
 html.lang-ko .section-head h2 {
