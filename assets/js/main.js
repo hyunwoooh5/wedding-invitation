@@ -182,7 +182,9 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     if (langToggle) {
-      langToggle.textContent = lang === 'ko' ? 'TW' : 'KR';
+      const nextLanguage = lang === 'ko' ? 'tw' : 'ko';
+      langToggle.textContent = nextLanguage === 'tw' ? '🇹🇼 TW' : '🇰🇷 KR';
+      langToggle.setAttribute('aria-label', nextLanguage === 'tw' ? '切換至台灣中文' : '한국어로 전환');
     }
 
     const recipient = document.querySelector('.letter-recipient');
