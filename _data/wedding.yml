@@ -91,6 +91,7 @@ ko:
       venue_address_label: "주소:"
       venue_directions_label: "오시는 길:"
       notes_title: "안내사항"
+      notes_closing_message: "그날 반가운 모습으로 뵙겠습니다!"
 
 tw:
   description: "誠摯邀請您參加我們婚禮的電子喜帖。"
@@ -109,7 +110,7 @@ tw:
     directions: |- 
       
       捷運：搭乘高雄捷運紅線至 三多商圈站 2 號出口，出站後步行約 9 分鐘即可抵達。
-    directions_2_label: "🅿️ 停車資訊（賓客均可免費折抵 5 小時）"
+    directions_2_label: "🅿️ 停車資訊（賓客均可免費折抵 4 小時）"
     directions_2: |-
       
       1. 高雄日航酒店 B2 停車場（本棟）
@@ -183,3 +184,4 @@ tw:
       venue_address_label: "地址："
       venue_directions_label: "前往方式："
       notes_title: "注意事項"
+      notes_closing_message: "期待與您相見！"
