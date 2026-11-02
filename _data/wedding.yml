@@ -39,13 +39,16 @@ ko:
         여러분의 축하와 마음만으로도 충분합니다. 금전적인 선물은 정중히 사양합니다.
     - heading: ""
       text: |-
+        당일 저녁 Kaohsiung National Stadium에서 AAA 시상식이 개최될 예정으로, 행사장 인근 지역은 많은 인파가 몰리고 교통 혼잡이 예상됩니다.
+    - heading: ""
+      text: |-
+        가오슝 여행은 다음 링크를 참조해주세요: [Google Maps](https://www.google.com/maps/d/edit?mid=1PjSGUt7D7XwMYgskJGPxkC57EpNRu3w&usp=sharing)
+    - heading: ""
+      text: |-
         저희의 예식은 비즈니스 캐주얼 차림으로 편안하게 참석해 주시면 감사하겠습니다.
     - heading: ""
       text: |-
         좌석 배치나 채식 등 특별한 식이 요청 사항이 있으시면 미리 저희에게 연락해 주세요.
-    - heading: ""
-      text: |-
-        가오슝 여행은 다음 링크를 참조해주세요: [Google Maps](https://www.google.com/maps/d/edit?mid=1PjSGUt7D7XwMYgskJGPxkC57EpNRu3w&usp=sharing)
         
 
   gallery:
@@ -106,7 +109,7 @@ tw:
     directions: |- 
       
       捷運：搭乘高雄捷運紅線至 三多商圈站 2 號出口，出站後步行約 9 分鐘即可抵達。
-    directions_2_label: "🅿️ 停車資訊（賓客均可免費折抵 4 小時）"
+    directions_2_label: "🅿️ 停車資訊（賓客均可免費折抵 5 小時）"
     directions_2: |-
       
       1. 高雄日航酒店 B2 停車場（本棟）
@@ -129,7 +132,7 @@ tw:
   notes:
     - heading: "心意至上"
       text: |-
-        您的出席與祝福就是我們最大的禮物，本宴席恕不收受禮金與禮品。
+        您的出席與祝福就是我們最大的禮物，本宴席懇辭禮金。
     - heading: "交通與住宿預訂"
       text: |-
         適逢高雄世運舉辦AAA，高鐵/台鐵車票與飯店極為緊繃，建議遠道而來的貴賓提早訂票與訂房。
